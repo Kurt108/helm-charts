@@ -45,21 +45,25 @@ The following table lists the configurable parameters of the Gotenberg chart and
 
 |              Parameter               |               Description                                  |                   Default                     |
 |--------------------------------------|------------------------------------------------------------|-----------------------------------------------|
-| `image.repository`                   | DokuWiki image name                                        | `thecodingmachine/gotenberg                   |
+| `image.repository`                   | DokuWiki image name                                        | `thecodingmachine/gotenberg`                   |
 | `image.tag`                          | DokuWiki image tag                                         | `{VERSION}`                                   |
-| `image.pullPolicy`                   | Image pull policy                                          | `IfNotpresent`                                |   | `service.type`                       | Kubernetes Service type                                    | `CluserIP`                                    |
+| `image.pullPolicy`                   | Image pull policy                                          | `IfNotpresent`                                |   
+| `basicAuth.enabled`                  | Secure service by basicAuth                                | `false`                                       |   
+| `basicAuth.username`                 | Username for BasicAuth                                     | `convert`                                       | 
+| `basicAuth.passwordMD5`              | Password Hash using htpasswd                               | `convert`                                       | 
+| `service.type`                       | Kubernetes Service type                                    | `CluserIP`                                    |
 | `service.port`                       | Service HTTP port                                          | `3000`                                        |
 | `ingress.enabled`                    | Enable ingress controller resource                         | `false`                                       |
-| `ingress.hosts[0].name`              | Hostname to your DokuWiki installation                     | `gotenberg.local`                              |
+| `ingress.hosts[0].name`              | Hostname to your DokuWiki installation                     | `gotenberg.local`                             |
 | `ingress.hosts[0].path`              | Path within the url structure                              | `/`                                           |
 | `ingress.hosts[0].tls`               | Utilize TLS backend in ingress                             | `false`                                       |
 | `ingress.hosts[0].certManager`       | Add annotations for cert-manager                           | `false`                                       |
-| `ingress.hosts[0].tlsSecret`         | TLS Secret (certificates)                                  | `gotenberg.local-tls`                          |
+| `ingress.hosts[0].tlsSecret`         | TLS Secret (certificates)                                  | `gotenberg.local-tls`                         |
 | `ingress.hosts[0].annotations`       | Annotations for this host's ingress record                 | `[]`                                          |
 | `ingress.secrets[0].name`            | TLS Secret Name                                            | `nil`                                         |
 | `ingress.secrets[0].certificate`     | TLS Secret Certificate                                     | `nil`                                         |
 | `ingress.secrets[0].key`             | TLS Secret Key                                             | `nil`                                         |
-| `resources`                          | CPU/Memory resource requests/limits                        | `nil`                 |
+| `resources`                          | CPU/Memory resource requests/limits                        | `nil`                                         |
 | `livenessProbe.enabled`              | Enable/disable the liveness probe                          | `true`                                        |
 | `livenessProbe.initialDelaySeconds`  | Delay before liveness probe is initiated                   | 120                                           |
 | `livenessProbe.periodSeconds`        | How often to perform the probe                             | 10                                            |

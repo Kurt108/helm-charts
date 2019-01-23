@@ -10,9 +10,18 @@ metadata:
     chart: {{ template "gotenberg.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
-{{- with .Values.ingress.annotations }}
+{{- if .Values.basicAuth.enabled }}
   annotations:
+    ingress.kubernetes.io/auth-type: "basic"
+    ingress.kubernetes.io/auth-secret: "{{ template "gotenberg.fullname" . }}"
+{{- with .Values.ingress.annotations }}
 {{ toYaml . | indent 4 }}
+{{- end }}
+{{ else }}
+  annotations:
+{{- with .Values.ingress.annotations }}
+{{ toYaml . | indent 4 }}  
+{{- end }}
 {{- end }}
 spec:
 {{- if .Values.ingress.tls }}

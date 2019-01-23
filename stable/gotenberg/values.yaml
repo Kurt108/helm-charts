@@ -13,6 +13,11 @@ service:
   type: ClusterIP
   port: 3000
 
+basicAuth:
+  enabled: false
+  username: convert
+  passwordMD5: $apr1$zQ7F0fKS$X3aXkUCufHQlVe51VWUKu1
+
 ingress:
   enabled: false
   annotations: {}
