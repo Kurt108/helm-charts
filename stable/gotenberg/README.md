@@ -59,7 +59,7 @@ The following table lists the configurable parameters of the Gotenberg chart and
 | `ingress.secrets[0].name`            | TLS Secret Name                                            | `nil`                                         |
 | `ingress.secrets[0].certificate`     | TLS Secret Certificate                                     | `nil`                                         |
 | `ingress.secrets[0].key`             | TLS Secret Key                                             | `nil`                                         |
-| `resources`                          | CPU/Memory resource requests/limits                        |  Memory: `512Mi`, CPU: `600m`                 |
+| `resources`                          | CPU/Memory resource requests/limits                        | `nil`                 |
 | `livenessProbe.enabled`              | Enable/disable the liveness probe                          | `true`                                        |
 | `livenessProbe.initialDelaySeconds`  | Delay before liveness probe is initiated                   | 120                                           |
 | `livenessProbe.periodSeconds`        | How often to perform the probe                             | 10                                            |
