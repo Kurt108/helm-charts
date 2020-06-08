@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: thecodingmachine/gotenberg
-  tag: 3.2.0
+  tag: 6.2.1
   pullPolicy: IfNotPresent
 
 service:
