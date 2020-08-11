@@ -5,9 +5,9 @@
 ## TL;DR;
 
 ```console
-$ helm repo add kurt--- https://kurt---.github.io/helm-gotenberg
+$ helm repo add Kurt108 https://Kurt108.github.io/helm-gotenberg
 $ helm repo update
-$ helm install kurt---/helm-gotenberg
+$ helm install Kurt108/helm-gotenberg
 ```
 
 ## Introduction
