@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  gotenberg:
+  - apiVersion: v1
+    appVersion: 6.2.1
+    created: "2020-08-11T10:41:51.76173+01:00"
+    description: A Helm chart for Gotenberg PDF-Service
+    digest: 73170b6c0b60efe2124933e9b93aa78e3b1dd4de5de03797b2a5ae3304add952
+    icon: https://user-images.githubusercontent.com/8983173/69229423-ac731300-0b85-11ea-8c2e-2cc00ecdb269.PNG
+    name: gotenberg
+    urls:
+    - https://kurt---.github.io/helm-gotenberg/gotenberg-2.0.0.tgz
+    version: 2.0.0
+generated: "2020-08-11T10:41:51.760666+01:00"
