@@ -19,6 +19,10 @@ spec:
         app: {{ template "gotenberg.name" . }}
         release: {{ .Release.Name }}
     spec:
+      securityContext:
+        runAsUser: 1001
+        runAsGroup: 1001
+        fsGroup: 1001
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
