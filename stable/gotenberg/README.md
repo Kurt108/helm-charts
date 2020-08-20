@@ -49,10 +49,10 @@ The following table lists the configurable parameters of the Gotenberg chart and
 |--------------------------------------|------------------------------------------------------------|-----------------------------------------------|
 | `image.repository`                   | DokuWiki image name                                        | `thecodingmachine/gotenberg`                   |
 | `image.tag`                          | DokuWiki image tag                                         | `{VERSION}`                                   |
-| `image.pullPolicy`                   | Image pull policy                                          | `IfNotpresent`                                |   
-| `basicAuth.enabled`                  | Secure service by basicAuth                                | `false`                                       |   
-| `basicAuth.username`                 | Username for BasicAuth                                     | `convert`                                       | 
-| `basicAuth.passwordMD5`              | Password Hash using htpasswd                               | `convert`                                       | 
+| `image.pullPolicy`                   | Image pull policy                                          | `IfNotpresent`                                |
+| `basicAuth.enabled`                  | Secure service by basicAuth                                | `false`                                       |
+| `basicAuth.username`                 | Username for BasicAuth                                     | `convert`                                       |
+| `basicAuth.passwordMD5`              | Password Hash using htpasswd                               | `convert`                                       |
 | `service.type`                       | Kubernetes Service type                                    | `CluserIP`                                    |
 | `service.port`                       | Service HTTP port                                          | `3000`                                        |
 | `ingress.enabled`                    | Enable ingress controller resource                         | `false`                                       |
@@ -81,7 +81,7 @@ The following table lists the configurable parameters of the Gotenberg chart and
 | `nodeSelector`                       | Node labels for pod assignment                             | `{}`                                          |
 | `affinity`                           | Affinity settings for pod assignment                       | `{}`                                          |
 | `tolerations`                        | Toleration labels for pod assignment                       | `[]`                                          |
-| `podAnnotations`                     | Pod annotations                                            | `{}`                                          |
+| `annotations`                     | Pod annotations                                            | `{}`                                          |
 | `metrics.enabled`                    | Start a side-car prometheus exporter                       | `false`                                       |
                                |
 
@@ -104,4 +104,3 @@ $ helm install --name my-release -f values.yaml stable/gotenberg
 ```
 
 > **Tip**: You can use the default [values.yaml](values.yaml)
-
