@@ -7,6 +7,10 @@ metadata:
     chart: {{ template "gotenberg.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
+  annotations:
+{{- if .Values.annotations }}
+{{ toYaml .Values.annotations | indent 8 }}
+{{- end }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
