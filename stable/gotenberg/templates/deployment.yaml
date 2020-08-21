@@ -7,6 +7,10 @@ metadata:
     chart: {{ template "gotenberg.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
+  annotations:
+{{- if .Values.annotations }}
+{{ toYaml .Values.annotations | indent 8 }}
+{{- end }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
@@ -18,6 +22,8 @@ spec:
       labels:
         app: {{ template "gotenberg.name" . }}
         release: {{ .Release.Name }}
+    annotations:
+      checksum/config: {{ include (print $.Template.BasePath "/secrets.yaml") . | sha256sum }}
     spec:
       securityContext:
         runAsUser: 1001
