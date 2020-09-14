@@ -579,4 +579,4 @@ sync:
     - name: drycc
       url: https://charts.drycc.cc/stable
     - name: kurt108
-      url: https://kurt108.github.io/helm-gotenberg/
+      url: https://kurt108.github.io/helm-charts/

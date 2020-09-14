@@ -1626,7 +1626,7 @@ repositories:
       - email: duanhongyi@drycc.cc
         name: duanhongyi
   - name: kurt108
-    url: https://kurt108.github.io/helm-gotenberg/
+    url: https://kurt108.github.io/helm-charts/
     maintainers:
       - email: kurt@bendlin.de
         name: kurt108

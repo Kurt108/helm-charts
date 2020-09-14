@@ -4,13 +4,13 @@ description: Gotenberg is a Docker-powered stateless API for converting HTML, Ma
 
 name: gotenberg
 icon: https://user-images.githubusercontent.com/8983173/69229423-ac731300-0b85-11ea-8c2e-2cc00ecdb269.PNG
-version: 2.1.0
+version: 2.1.1
 
 home: https://thecodingmachine.github.io/gotenberg/
 sources:
   - https://github.com/thecodingmachine/gotenberg
 maintainers: 
   - name: Kurt Bendlin
-    url: https://github.com/Kurt108
+    url: https://github.com/kurt108
 
 deprecated: false    
