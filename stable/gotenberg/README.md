@@ -22,8 +22,8 @@ TEST SUITE: None
 NOTES:
 1. Get the application URL by running these commands:
   export POD_NAME=$(kubectl get pods --namespace sulu -l "app=gotenberg,release=my-release" -o jsonpath="{.items[0].metadata.name}")
-  echo "Visit http://127.0.0.1:8080 to use your application"
-  kubectl port-forward $POD_NAME 8080:80
+  echo "Visit http://127.0.0.1:3000 to use your application"
+  kubectl port-forward $POD_NAME 3000:3000
 
 
 ```
