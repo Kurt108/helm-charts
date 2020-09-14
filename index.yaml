@@ -3,6 +3,23 @@ entries:
   gotenberg:
   - apiVersion: v1
     appVersion: 6.3.0
+    created: "2020-09-14T11:57:33.406495433Z"
+    description: Gotenberg is a Docker-powered stateless API for converting HTML,
+      Markdown and Office documents to PDF.
+    digest: cf50eb06ed8f318f52af14c1e2b4567679eb4808af7034dfeaf4e46a999837ec
+    home: https://thecodingmachine.github.io/gotenberg/
+    icon: https://user-images.githubusercontent.com/8983173/69229423-ac731300-0b85-11ea-8c2e-2cc00ecdb269.PNG
+    maintainers:
+    - name: Kurt Bendlin
+      url: https://github.com/kurt108
+    name: gotenberg
+    sources:
+    - https://github.com/thecodingmachine/gotenberg
+    urls:
+    - https://github.com/Kurt108/helm-charts/releases/download/gotenberg-2.1.1/gotenberg-2.1.1.tgz
+    version: 2.1.1
+  - apiVersion: v1
+    appVersion: 6.3.0
     created: "2020-09-14T11:42:06.573751575Z"
     description: Gotenberg is a Docker-powered stateless API for converting HTML,
       Markdown and Office documents to PDF.
