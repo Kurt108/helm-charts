@@ -2,12 +2,30 @@
 
 [Gotenberg](https://thecodingmachine.github.io/gotenberg) is a Docker-powered stateless API for converting HTML, Markdown and Office documents to PDF.
 
-## TL;DR;
+## Installing the Chart
 
 ```console
-$ helm repo add Kurt108 https://Kurt108.github.io/helm-gotenberg
+$ helm repo add kurt108 https://kurt108.github.io/helm-gotenberg
+"kurt108" has been added to your repositories
 $ helm repo update
-$ helm install Kurt108/helm-gotenberg
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "kurt108" chart repository
+...
+Update Complete. ⎈ Happy Helming!⎈
+$ helm install my-release kurt108/gotenberg
+NAME: my-release
+LAST DEPLOYED: Mon Sep 14 10:20:30 2020
+NAMESPACE: sulu
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+NOTES:
+1. Get the application URL by running these commands:
+  export POD_NAME=$(kubectl get pods --namespace sulu -l "app=gotenberg,release=my-release" -o jsonpath="{.items[0].metadata.name}")
+  echo "Visit http://127.0.0.1:8080 to use your application"
+  kubectl port-forward $POD_NAME 8080:80
+
+
 ```
 
 ## Introduction
@@ -19,14 +37,6 @@ This chart bootstraps a [Gotenberg](https://thecodingmachine.github.io/gotenberg
 - Kubernetes 1.4+ with Beta APIs enabled
 - PV provisioner support in the underlying infrastructure
 
-## Installing the Chart
-
-To install the chart with the release name `my-release`:
-
-```console
-$ helm install --name my-release https://github.com/kurt---/helm-gotenberg
-```
-
 The command deploys Gotenberg on the Kubernetes cluster in the default configuration. The [configuration](#configuration) section lists the parameters that can be configured during installation.
 
 > **Tip**: List all releases using `helm list`
@@ -37,6 +47,7 @@ To uninstall/delete the `my-release` deployment:
 
 ```console
 $ helm delete my-release
+release "my-release" uninstalled
 ```
 
 The command removes all the Kubernetes components associated with the chart and deletes the release.
@@ -74,7 +85,7 @@ The following table lists the configurable parameters of the Gotenberg chart and
 | `livenessProbe.successThreshold`     | Minimum consecutive successes to be considered successful  | 1                                             |
 | `readinessProbe.enabled`             | Enable/disable the readiness probe                         | `true`                                        |
 | `readinessProbe.initialDelaySeconds` | Delay before readinessProbe is initiated                   | 30                                            |
-| `readinessProbe.periodSeconds   `    | How often to perform the probe                             | 10                                            |
+| `readinessProbe.periodSeconds`    | How often to perform the probe                             | 10                                            |
 | `readinessProbe.timeoutSeconds`      | When the probe times out                                   | 5                                             |
 | `readinessProbe.failureThreshold`    | Minimum consecutive failures to be considered failed       | 6                                             |
 | `readinessProbe.successThreshold`    | Minimum consecutive successes to be considered successful  | 1                                             |
@@ -83,9 +94,6 @@ The following table lists the configurable parameters of the Gotenberg chart and
 | `tolerations`                        | Toleration labels for pod assignment                       | `[]`                                          |
 | `annotations`                     | Pod annotations                                            | `{}`                                          |
 | `metrics.enabled`                    | Start a side-car prometheus exporter                       | `false`                                       |
-                               |
-
-
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example,
 
@@ -100,7 +108,7 @@ The above command sets the Docker tag to 3.0.
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart. For example,
 
 ```console
-$ helm install --name my-release -f values.yaml stable/gotenberg
+$ helm install my-release -f values.yaml stable/gotenberg
 ```
 
 > **Tip**: You can use the default [values.yaml](values.yaml)
