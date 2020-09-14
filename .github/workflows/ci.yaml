@@ -2,9 +2,11 @@ name: Lint and Test Charts
 
 on:
   push:
-    branches: [ master ]
+    branches: [ develop ]
   pull_request:
-    branches: [ master ]
+    branches: 
+      - master
+      - develop
 
     
 jobs:
