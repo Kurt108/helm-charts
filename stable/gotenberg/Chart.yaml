@@ -1,6 +1,7 @@
 apiVersion: v1
-appVersion: "6.2.1"
-description: A Helm chart for Gotenberg PDF-Service
+appVersion: "6.3.0"
+description: Gotenberg is a Docker-powered stateless API for converting HTML, Markdown and Office documents to PDF.
+
 name: gotenberg
 icon: https://user-images.githubusercontent.com/8983173/69229423-ac731300-0b85-11ea-8c2e-2cc00ecdb269.PNG
-version: 2.0.0
+version: 2.1.0
