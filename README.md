@@ -1,4 +1,4 @@
-This Repository contains some charts. 
+# This Repository contains some charts maintaied by kurt108
 
 ## Installing Chart
 
