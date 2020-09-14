@@ -4,7 +4,7 @@
 
 A chart containing Matomo
 
-Current chart version is `0.4.0`
+Current chart version is `0.4.1`
 
 ## Based on
 
