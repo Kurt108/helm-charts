@@ -2,7 +2,7 @@ gotenberg
 =========
 Gotenberg is a Docker-powered stateless API for converting HTML, Markdown and Office documents to PDF.
 
-Current chart version is `2.0.0`
+Current chart version is `2.1.0`
 
 
 
@@ -19,7 +19,7 @@ Current chart version is `2.0.0`
 | basicAuth.username | string | `"convert"` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.repository | string | `"thecodingmachine/gotenberg"` |  |
-| image.tag | string | `"6.2.1"` |  |
+| image.tag | string | `"6.3.0"` |  |
 | ingress.annotations | object | `{}` |  |
 | ingress.enabled | bool | `false` |  |
 | ingress.hosts[0] | string | `"gotenberg.local"` |  |
