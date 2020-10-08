@@ -1,3 +1,4 @@
 helm-extra-args: --timeout 600
 check-version-increment: true
 debug: true
+ChartRepos: ["https://kubernetes-charts.storage.googleapis.com/"]
