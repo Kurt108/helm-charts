@@ -1,7 +1,8 @@
 [![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/kurt108)](https://artifacthub.io/packages/search?repo=kurt108)
 
-# matomo
 
+# matomo
+======
 A chart containing Matomo
 
 Current chart version is `0.4.1`
@@ -25,14 +26,14 @@ NAME: my-release
 ...
 ```
 
-## Requirements
+## Chart Requirements
 
 | Repository | Name | Version |
 |------------|------|---------|
 | https://kubernetes-charts.storage.googleapis.com/ | mysql | ~1.6.6 |
 | https://kubernetes-charts.storage.googleapis.com/ | redis | ~10.2.1 |
 
-## Values
+## Chart Values
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
