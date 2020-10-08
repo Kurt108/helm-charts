@@ -1,7 +1,7 @@
 replicaCount: 1
-env: 
-  THUMBOR_NUM_PROCESSES: '1'
-  CORS_ALLOW_ORIGIN: '*'
+env:
+  THUMBOR_NUM_PROCESSES: "1"
+  CORS_ALLOW_ORIGIN: "*"
   AUTO_WEBP: "True"
   RESULT_STORAGE: "thumbor.result_storages.no_storage"
   RESULT_STORAGE_STORES_UNSAFE: "True"
@@ -13,38 +13,31 @@ env:
   RESULT_STORAGE_EXPIRATION_SECONDS: "31536000"
   ALLOW_UNSAFE_URL: "True"
   LOG_LEVEL: "error"
-  ALLOWED_SOURCES: ['http://s.glbimg.com']
+  ALLOWED_SOURCES: ["http://s.glbimg.com"]
 #  ALLOWED_SOURCES: ['.+\.globo\.com', '.+\.glbimg\.com']
 
 ingress:
-   hosts:
-     - "thumbor.domain" 
-   # Use this if you are using Traefik as your ingress-router
-   # path: "/scale"  
+  hosts:
+    - "thumbor.domain"
+  # Use this if you are using Traefik as your ingress-router
+  # path: "/scale"
   # Use this if you are using nginx as your ingress-router
-   path: "/scale(/|$)(.*)"
-   annotations: 
-   # rules to strip the /scale path
-   # Use this if you are using Traefik as your ingress-router
-   # traefik.frontend.rule.type: PathPrefixStrip # Use this if you are using Traefik as your ingress-router
-   # Use this if you are using nginx as your ingress-router
-     nginx.ingress.kubernetes.io/rewrite-target: /$2   
-     
-
-
-
-
+  path: "/scale(/|$)(.*)"
+  annotations:
+    # rules to strip the /scale path
+    # Use this if you are using Traefik as your ingress-router
+    # traefik.frontend.rule.type: PathPrefixStrip # Use this if you are using Traefik as your ingress-router
+    # Use this if you are using nginx as your ingress-router
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
 
 image:
-  repository:  registry.hub.docker.com/minimalcompact/thumbor
+  repository: registry.hub.docker.com/minimalcompact/thumbor
   tag: 6.7.5
   pullPolicy: IfNotPresent
-  
 
 service:
   name: thumbor
   type: ClusterIP
-
 
 persistence:
   enabled: false
@@ -59,4 +52,3 @@ resources:
   requests:
     cpu: 1
     memory: 512Mi
-
