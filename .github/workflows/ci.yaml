@@ -1,10 +1,14 @@
 name: Lint and Test Charts
 
 on:
+  push:
+    branches: [ develop ]
   pull_request:
-    paths:
-      - "stable/**"
+    branches: 
+      - master
+      - develop
 
+    
 jobs:
   lint-chart:
     runs-on: ubuntu-latest
