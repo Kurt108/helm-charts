@@ -8,5 +8,5 @@ home: http://thumbor.org/
 sources:
   - https://github.com/MinimalCompact/thumbor
 maintainers:
-  - name: Kurt Bendlin
+  - name: kurt108
 deprecated: false
