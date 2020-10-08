@@ -7,8 +7,7 @@ description: A chart containing Thumbor
 home: http://thumbor.org/
 sources:
   - https://github.com/MinimalCompact/thumbor
-maintainers: 
+maintainers:
   - name: Kurt Bendlin
     url: https://github.com/kurt108
-
-deprecated: false    
+deprecated: false
