@@ -23,6 +23,9 @@ spec:
       volumes:
       - name: storage
         emptyDir: {}
+      - name: {{ template "thumbor.fullname" . }}-config
+        configMap:
+          name: {{ template "thumbor.fullname" . }}-config  
       containers:
       - name: {{ .Chart.Name }}
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
@@ -45,5 +48,9 @@ spec:
         - name: storage
           mountPath: /app/storage
           readOnly: false
+        - name: {{ template "thumbor.fullname" . }}-config
+          mountPath: "/app/thumbor.conf"       
+          subPath: "thumbor.conf"         
         resources:
 {{ toYaml .Values.resources | indent 12 }}
+      

@@ -13,8 +13,10 @@ env:
   RESULT_STORAGE_EXPIRATION_SECONDS: "31536000"
   ALLOW_UNSAFE_URL: "True"
   LOG_LEVEL: "error"
-  ALLOWED_SOURCES: ["http://s.glbimg.com"]
-#  ALLOWED_SOURCES: ['.+\.globo\.com', '.+\.glbimg\.com']
+
+# Some Configs should be set via config-file and not as environment variable
+conf:
+  allowedSources: "\'http://domain_or_wildcard\', \'comma_seperated\'"
 
 ingress:
   hosts:
