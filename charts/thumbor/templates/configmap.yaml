@@ -248,7 +248,7 @@ data:
     
     
     
-    HEALTHCHECK_ROUTE = '/'
+    HEALTHCHECK_ROUTE = '/healthcheck'
     
     
     ################################### Metrics ####################################
