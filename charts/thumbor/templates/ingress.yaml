@@ -1,0 +1,29 @@
+{{- $fullName := include "thumbor.fullname" . -}}
+{{- $servicePath := .Values.ingress.path -}}
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: {{ $fullName }}
+{{- if .Values.ingress.annotations }}
+  annotations:
+{{ toYaml .Values.ingress.annotations | indent 4 }}
+{{- end }}
+  labels:
+    app: {{ template "thumbor.name" . }}
+    chart: {{ template "thumbor.chart" . }}
+    heritage: {{ .Release.Service }}
+    release: {{ .Release.Name }}
+{{- if .labels }}
+{{ toYaml .labels | indent 4 }}
+{{- end }}
+spec:
+  rules:
+    {{- range $host := .Values.ingress.hosts }}
+    - host: {{ $host }}
+      http:
+        paths:
+          - path: {{ $servicePath }}
+            backend:
+              serviceName: {{ $fullName }}
+              servicePort: 80
+  {{- end }}
