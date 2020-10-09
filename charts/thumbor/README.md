@@ -32,7 +32,7 @@ NAME: my-release
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| env.ALLOWED_SOURCES[0] | string | `'http://s.glbimg.com'` |  |
+| conf.allowedSources | string | `"'http://domain_or_wildcard', 'comma_seperated'"` |  |
 | env.ALLOW_UNSAFE_URL | string | `"True"` |  |
 | env.AUTO_WEBP | string | `"True"` |  |
 | env.CORS_ALLOW_ORIGIN | string | `"*"` |  |

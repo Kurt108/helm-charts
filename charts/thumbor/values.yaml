@@ -16,7 +16,7 @@ env:
 
 # Some Configs should be set via config-file and not as environment variable
 conf:
-  allowedSources: "\'http://domain_or_wildcard\', \'comma_seperated\'"
+  allowedSources: "'http://domain_or_wildcard', 'comma_seperated'"
 
 ingress:
   hosts:
