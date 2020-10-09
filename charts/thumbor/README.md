@@ -5,7 +5,7 @@
 =======
 A chart containing Thumbor
 
-Current chart version is `1.0.2`
+Current chart version is `1.0.4`
 
 ## Based on
 
@@ -36,7 +36,7 @@ NAME: my-release
 | env.ALLOW_UNSAFE_URL | string | `"True"` |  |
 | env.AUTO_WEBP | string | `"True"` |  |
 | env.CORS_ALLOW_ORIGIN | string | `"*"` |  |
-| env.HEALTHCHECK_ROUTE | string | `"/"` |  |
+| env.HEALTHCHECK_ROUTE | string | `"/healthcheck"` |  |
 | env.LOG_LEVEL | string | `"error"` |  |
 | env.MAX_AGE | string | `"3600"` |  |
 | env.MAX_AGE_TEMP_IMAGE | string | `"300"` |  |

@@ -6,7 +6,7 @@ env:
   RESULT_STORAGE: "thumbor.result_storages.no_storage"
   RESULT_STORAGE_STORES_UNSAFE: "True"
   STORAGE: "thumbor.storages.file_storage"
-  HEALTHCHECK_ROUTE: "/"
+  HEALTHCHECK_ROUTE: "/healthcheck"
   THUMBOR_PORT: "80"
   MAX_AGE: "3600"
   MAX_AGE_TEMP_IMAGE: "300"
