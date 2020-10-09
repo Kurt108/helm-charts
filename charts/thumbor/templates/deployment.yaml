@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ template "thumbor.fullname" . }}
+  labels:
+    chart: {{ template "thumbor.name" . }}
+    app: {{ template "thumbor.name" . }}
+    chart: {{ template "thumbor.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}    
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ template "thumbor.name" . }}
+      release: {{ .Release.Name }}  
+  template:
+    metadata:
+      labels:
+        app: {{ template "thumbor.name" . }}
+        release: {{ .Release.Name }}        
+    spec:
+      volumes:
+      - name: storage
+        emptyDir: {}
+      - name: {{ template "thumbor.fullname" . }}-config
+        configMap:
+          name: {{ template "thumbor.fullname" . }}-config  
+      containers:
+      - name: {{ .Chart.Name }}
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        args:
+          - "thumbor"
+        ports:
+        - name: http
+          containerPort: 80
+        env:
+        - name: THUMBOR_PORT
+          value: {{ .Values.service.internalPort | quote }}
+{{- range $name, $value := .Values.env }}
+{{- if not (empty $value) }}
+        - name: {{ $name | quote }}
+          value: {{ $value | quote }}
+{{- end }}
+{{- end }}
+        volumeMounts:
+        - name: storage
+          mountPath: /app/storage
+          readOnly: false
+        - name: {{ template "thumbor.fullname" . }}-config
+          mountPath: "/app/thumbor.conf"       
+          subPath: "thumbor.conf"         
+        resources:
+{{ toYaml .Values.resources | indent 12 }}
+      
