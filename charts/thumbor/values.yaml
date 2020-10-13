@@ -1,6 +1,6 @@
 replicaCount: 1
 env:
-  open: 
+  open:
     THUMBOR_NUM_PROCESSES: "1"
     CORS_ALLOW_ORIGIN: "*"
     AUTO_WEBP: "True"
@@ -17,8 +17,8 @@ env:
 
 auth:
   enabled: true
-  username: "thumbor" #username
-  password: "$1$nwVVjM_Y$VeLOyr0CIIMXQajJL2pXT1" #password generated via htpasswd (password)
+  username: "thumbor" # Username
+  password: "$1$nwVVjM_Y$VeLOyr0CIIMXQajJL2pXT1" # Password generated via htpasswd (password)
   # existingSecret: specify the name of a existing secret
 
 # Some Configs should be set via config-file and not as environment variable
