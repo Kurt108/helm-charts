@@ -36,6 +36,7 @@ NAME: my-release
 | auth.password | string | `"$1$nwVVjM_Y$VeLOyr0CIIMXQajJL2pXT1"` |  |
 | auth.username | string | `"thumbor"` |  |
 | conf.allowedSources | string | `"'http://domain_or_wildcard', 'comma_seperated'"` |  |
+<<<<<<< HEAD
 | env.open.ALLOW_UNSAFE_URL | string | `"True"` |  |
 | env.open.AUTO_WEBP | string | `"True"` |  |
 | env.open.CORS_ALLOW_ORIGIN | string | `"*"` |  |
@@ -49,6 +50,21 @@ NAME: my-release
 | env.open.STORAGE | string | `"thumbor.storages.file_storage"` |  |
 | env.open.THUMBOR_NUM_PROCESSES | string | `"1"` |  |
 | env.open.THUMBOR_PORT | string | `"80"` |  |
+=======
+| env.ALLOW_UNSAFE_URL | string | `"True"` |  |
+| env.AUTO_WEBP | string | `"True"` |  |
+| env.CORS_ALLOW_ORIGIN | string | `"*"` |  |
+| env.HEALTHCHECK_ROUTE | string | `"/healthcheck"` |  |
+| env.LOG_LEVEL | string | `"error"` |  |
+| env.MAX_AGE | string | `"3600"` |  |
+| env.MAX_AGE_TEMP_IMAGE | string | `"300"` |  |
+| env.RESULT_STORAGE | string | `"thumbor.result_storages.no_storage"` |  |
+| env.RESULT_STORAGE_EXPIRATION_SECONDS | string | `"31536000"` |  |
+| env.RESULT_STORAGE_STORES_UNSAFE | string | `"True"` |  |
+| env.STORAGE | string | `"thumbor.storages.file_storage"` |  |
+| env.THUMBOR_NUM_PROCESSES | string | `"1"` |  |
+| env.THUMBOR_PORT | string | `"80"` |  |
+>>>>>>> master
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.repository | string | `"registry.hub.docker.com/minimalcompact/thumbor"` |  |
 | image.tag | string | `"6.7.5"` |  |
