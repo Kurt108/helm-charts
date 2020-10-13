@@ -4,9 +4,12 @@ apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: {{ $fullName }}
-{{- if .Values.ingress.annotations }}
+{{- if (.Values.ingress.annotations) or (.Values.auth.enabled) }}
   annotations:
 {{ toYaml .Values.ingress.annotations | indent 4 }}
+    nginx.ingress.kubernetes.io/auth-type: basic
+    nginx.ingress.kubernetes.io/auth-secret: {{ template "thumbor.name" . }}-auth
+    nginx.ingress.kubernetes.io/auth-realm: 'Authentication Required - Thumbor'
 {{- end }}
   labels:
     app: {{ template "thumbor.name" . }}
