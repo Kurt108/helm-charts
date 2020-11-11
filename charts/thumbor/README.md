@@ -5,7 +5,7 @@
 =======
 A chart containing Thumbor
 
-Current chart version is `1.0.7`
+Current chart version is `1.0.8`
 
 ## Based on
 
