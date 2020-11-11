@@ -1,18 +1,25 @@
 replicaCount: 1
 env:
-  THUMBOR_NUM_PROCESSES: "1"
-  CORS_ALLOW_ORIGIN: "*"
-  AUTO_WEBP: "True"
-  RESULT_STORAGE: "thumbor.result_storages.no_storage"
-  RESULT_STORAGE_STORES_UNSAFE: "True"
-  STORAGE: "thumbor.storages.file_storage"
-  HEALTHCHECK_ROUTE: "/"
-  THUMBOR_PORT: "80"
-  MAX_AGE: "3600"
-  MAX_AGE_TEMP_IMAGE: "300"
-  RESULT_STORAGE_EXPIRATION_SECONDS: "31536000"
-  ALLOW_UNSAFE_URL: "True"
-  LOG_LEVEL: "error"
+  open:
+    THUMBOR_NUM_PROCESSES: "1"
+    CORS_ALLOW_ORIGIN: "*"
+    AUTO_WEBP: "True"
+    RESULT_STORAGE: "thumbor.result_storages.no_storage"
+    RESULT_STORAGE_STORES_UNSAFE: "True"
+    STORAGE: "thumbor.storages.file_storage"
+    HEALTHCHECK_ROUTE: "/healthcheck"
+    THUMBOR_PORT: "80"
+    MAX_AGE: "3600"
+    MAX_AGE_TEMP_IMAGE: "300"
+    RESULT_STORAGE_EXPIRATION_SECONDS: "31536000"
+    ALLOW_UNSAFE_URL: "True"
+    LOG_LEVEL: "error"
+
+auth:
+  enabled: true
+  username: "thumbor"   # Username
+  password: "$1$nwVVjM_Y$VeLOyr0CIIMXQajJL2pXT1"   # Password generated via htpasswd (password)
+  # existingSecret: specify the name of a existing secret
 
 # Some Configs should be set via config-file and not as environment variable
 conf:
@@ -54,3 +61,9 @@ resources:
   requests:
     cpu: 1
     memory: 512Mi
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 1
+  targetCPUUtilizationPercentage: 80
