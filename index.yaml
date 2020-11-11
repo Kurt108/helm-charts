@@ -3,9 +3,24 @@ entries:
   gotenberg:
   - apiVersion: v1
     appVersion: 6.3.0
+    created: "2020-11-11T16:19:25.594572801Z"
+    description: Gotenberg is a Docker-powered stateless API for converting HTML, Markdown and Office documents to PDF.
+    digest: 3008169762a401b0ad40bedfc5a7349f83691fda3534682eefae74311d881803
+    home: https://thecodingmachine.github.io/gotenberg/
+    icon: https://user-images.githubusercontent.com/8983173/69229423-ac731300-0b85-11ea-8c2e-2cc00ecdb269.PNG
+    maintainers:
+    - name: kurt108
+      url: https://github.com/kurt108
+    name: gotenberg
+    sources:
+    - https://github.com/thecodingmachine/gotenberg
+    urls:
+    - https://github.com/Kurt108/helm-charts/releases/download/gotenberg-2.1.4/gotenberg-2.1.4.tgz
+    version: 2.1.4
+  - apiVersion: v1
+    appVersion: 6.3.0
     created: "2020-10-09T11:08:58.560176061Z"
-    description: Gotenberg is a Docker-powered stateless API for converting HTML,
-      Markdown and Office documents to PDF.
+    description: Gotenberg is a Docker-powered stateless API for converting HTML, Markdown and Office documents to PDF.
     digest: 5adb4e9c87eeb835f37744988d3194879b1df483d87ac70b397f2bfa084b535b
     home: https://thecodingmachine.github.io/gotenberg/
     icon: https://user-images.githubusercontent.com/8983173/69229423-ac731300-0b85-11ea-8c2e-2cc00ecdb269.PNG
@@ -21,8 +36,7 @@ entries:
   - apiVersion: v1
     appVersion: 6.3.0
     created: "2020-09-14T12:33:00.273775897Z"
-    description: Gotenberg is a Docker-powered stateless API for converting HTML,
-      Markdown and Office documents to PDF.
+    description: Gotenberg is a Docker-powered stateless API for converting HTML, Markdown and Office documents to PDF.
     digest: 0f75d4d24d6675be2128ba73c9ba564287f729a4ff752a1db942c8cb24f36d32
     home: https://thecodingmachine.github.io/gotenberg/
     icon: https://user-images.githubusercontent.com/8983173/69229423-ac731300-0b85-11ea-8c2e-2cc00ecdb269.PNG
@@ -38,8 +52,7 @@ entries:
   - apiVersion: v1
     appVersion: 6.3.0
     created: "2020-09-14T11:57:33.406495433Z"
-    description: Gotenberg is a Docker-powered stateless API for converting HTML,
-      Markdown and Office documents to PDF.
+    description: Gotenberg is a Docker-powered stateless API for converting HTML, Markdown and Office documents to PDF.
     digest: cf50eb06ed8f318f52af14c1e2b4567679eb4808af7034dfeaf4e46a999837ec
     home: https://thecodingmachine.github.io/gotenberg/
     icon: https://user-images.githubusercontent.com/8983173/69229423-ac731300-0b85-11ea-8c2e-2cc00ecdb269.PNG
@@ -55,8 +68,7 @@ entries:
   - apiVersion: v1
     appVersion: 6.3.0
     created: "2020-09-14T11:42:06.573751575Z"
-    description: Gotenberg is a Docker-powered stateless API for converting HTML,
-      Markdown and Office documents to PDF.
+    description: Gotenberg is a Docker-powered stateless API for converting HTML, Markdown and Office documents to PDF.
     digest: 416c3f473b9737c62c8ba024e5be3b0d7caa9cfb59603505d0f9b54cf9c68401
     home: https://thecodingmachine.github.io/gotenberg/
     icon: https://user-images.githubusercontent.com/8983173/69229423-ac731300-0b85-11ea-8c2e-2cc00ecdb269.PNG
@@ -96,6 +108,21 @@ entries:
     - https://github.com/Kurt108/helm-charts/releases/download/matomo-0.4.1/matomo-0.4.1.tgz
     version: 0.4.1
   thumbor:
+  - apiVersion: v1
+    appVersion: 6.7.5
+    created: "2020-11-11T16:19:25.689439416Z"
+    description: A chart containing Thumbor
+    digest: 68021e5988a65121a56638197a1b86aa48d5402f20b7e5ac94bb0d36ec4cbc29
+    home: http://thumbor.org/
+    icon: https://camo.githubusercontent.com/8add159463b5ef31481d1e0cc9fb590cd662fe62/68747470733a2f2f73332e65752d776573742d322e616d617a6f6e6177732e636f6d2f6d696e696d616c2d636f6d706163742f696d616765732f6d632d7468756d626f722e706e67
+    maintainers:
+    - name: kurt108
+    name: thumbor
+    sources:
+    - https://github.com/MinimalCompact/thumbor
+    urls:
+    - https://github.com/Kurt108/helm-charts/releases/download/thumbor-1.0.6/thumbor-1.0.6.tgz
+    version: 1.0.6
   - apiVersion: v1
     appVersion: 6.7.5
     created: "2020-10-13T12:40:50.00105395Z"
