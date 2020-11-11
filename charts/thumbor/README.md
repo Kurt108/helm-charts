@@ -5,7 +5,7 @@
 =======
 A chart containing Thumbor
 
-Current chart version is `1.0.5`
+Current chart version is `1.0.6`
 
 ## Based on
 
@@ -32,6 +32,10 @@ NAME: my-release
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
+| autoscaling.enabled | bool | `false` |  |
+| autoscaling.maxReplicas | int | `1` |  |
+| autoscaling.minReplicas | int | `1` |  |
+| autoscaling.targetCPUUtilizationPercentage | int | `80` |  |
 | auth.enabled | bool | `true` |  |
 | auth.password | string | `"$1$nwVVjM_Y$VeLOyr0CIIMXQajJL2pXT1"` |  |
 | auth.username | string | `"thumbor"` |  |

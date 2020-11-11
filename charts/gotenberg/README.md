@@ -5,7 +5,7 @@
 =========
 Gotenberg is a Docker-powered stateless API for converting HTML, Markdown and Office documents to PDF.
 
-Current chart version is `2.1.3`
+Current chart version is `2.1.4`
 
 ## Installing the Chart
 
@@ -30,6 +30,10 @@ NAME: my-release
 |-----|------|---------|-------------|
 | affinity | object | `{}` |  |
 | annotations | object | `{}` |  |
+| autoscaling.enabled | bool | `false` |  |
+| autoscaling.maxReplicas | int | `1` |  |
+| autoscaling.minReplicas | int | `1` |  |
+| autoscaling.targetCPUUtilizationPercentage | int | `80` |  |
 | basicAuth.enabled | bool | `false` |  |
 | basicAuth.passwordMD5 | string | `"$apr1$zQ7F0fKS$X3aXkUCufHQlVe51VWUKu1"` |  |
 | basicAuth.username | string | `"convert"` |  |
