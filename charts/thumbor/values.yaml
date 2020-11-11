@@ -15,11 +15,6 @@ env:
     ALLOW_UNSAFE_URL: "True"
     LOG_LEVEL: "error"
 
-auth:
-  enabled: true
-  username: "thumbor"   # Username
-  password: "$1$nwVVjM_Y$VeLOyr0CIIMXQajJL2pXT1"   # Password generated via htpasswd (password)
-  # existingSecret: specify the name of a existing secret
 
 # Some Configs should be set via config-file and not as environment variable
 conf:
