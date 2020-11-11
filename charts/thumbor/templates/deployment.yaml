@@ -21,8 +21,13 @@ spec:
         release: {{ .Release.Name }}        
     spec:
       volumes:
-      - name: storage
+      - name: {{ template "thumbor.fullname" . }}-storage
+        {{- if .Values.persistence.enabled }}
+        persistentVolumeClaim:
+          claimName: {{ .Values.persistence.existingClaim | default (include "dwcthumbor2backend.fullname" .) }}-storage
+        {{- else }}
         emptyDir: {}
+        {{ end }}
       - name: {{ template "thumbor.fullname" . }}-config
         configMap:
           name: {{ template "thumbor.fullname" . }}-config  
@@ -45,12 +50,13 @@ spec:
 {{- end }}
 {{- end }}
         volumeMounts:
-        - name: storage
-          mountPath: /app/storage
+        - name: {{ template "thumbor.fullname" . }}-storage
+          mountPath: /data/storage
           readOnly: false
         - name: {{ template "thumbor.fullname" . }}-config
           mountPath: "/app/thumbor.conf"       
           subPath: "thumbor.conf"         
         resources:
 {{ toYaml .Values.resources | indent 12 }}
+      
       
