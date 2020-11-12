@@ -126,6 +126,21 @@ entries:
   thumbor:
   - apiVersion: v1
     appVersion: 6.7.5
+    created: "2020-11-12T19:40:11.885750171Z"
+    description: A chart containing Thumbor
+    digest: b60a12d695d6aa25b41c6e55560fab3761bc98c290ab59c79116a080761fb93b
+    home: http://thumbor.org/
+    icon: https://camo.githubusercontent.com/8add159463b5ef31481d1e0cc9fb590cd662fe62/68747470733a2f2f73332e65752d776573742d322e616d617a6f6e6177732e636f6d2f6d696e696d616c2d636f6d706163742f696d616765732f6d632d7468756d626f722e706e67
+    maintainers:
+    - name: kurt108
+    name: thumbor
+    sources:
+    - https://github.com/MinimalCompact/thumbor
+    urls:
+    - https://github.com/Kurt108/helm-charts/releases/download/thumbor-1.0.14/thumbor-1.0.14.tgz
+    version: 1.0.14
+  - apiVersion: v1
+    appVersion: 6.7.5
     created: "2020-11-12T19:30:57.389416379Z"
     description: A chart containing Thumbor
     digest: f9efdafe3f8ee56862a6da42c93725ebf380063d43d82a2c9d74e600a8c2c728
