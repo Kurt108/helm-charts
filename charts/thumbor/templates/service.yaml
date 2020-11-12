@@ -4,7 +4,6 @@ metadata:
   name: {{ template "thumbor.fullname" . }}
   labels:
     app: {{ template "thumbor.name" . }}
-    chart: {{ template "thumbor.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 spec:

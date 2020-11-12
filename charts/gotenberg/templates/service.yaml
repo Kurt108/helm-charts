@@ -4,7 +4,6 @@ metadata:
   name: {{ template "gotenberg.fullname" . }}
   labels:
     app: {{ template "gotenberg.name" . }}
-    chart: {{ template "gotenberg.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 spec:
