@@ -36,8 +36,6 @@ spec:
         - name: http
           containerPort: 80
         env:
-        - name: THUMBOR_PORT
-          value: {{ .Values.service.internalPort | quote }}
 {{- range $name, $value := .Values.env.open }}
 {{- if not (empty $value) }}
         - name: {{ $name | quote }}
