@@ -58,4 +58,3 @@ spec:
           subPath: "thumbor.conf"         
         resources:
 {{ toYaml .Values.resources | indent 12 }}
-      
