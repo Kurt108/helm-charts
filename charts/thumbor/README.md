@@ -5,7 +5,7 @@
 =======
 A chart containing Thumbor
 
-Current chart version is `1.1.0`
+Current chart version is `1.1.1`
 
 Based on
 
@@ -25,8 +25,6 @@ $ helm install my-release kurt108/thumbor
 NAME: my-release
 ...
 ```
-
-
 
 ## Chart Values
 
