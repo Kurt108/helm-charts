@@ -1,0 +1,36 @@
+apiVersion: v1
+entries:
+  gotenberg:
+  - apiVersion: v1
+    appVersion: 6.3.0
+    created: "2020-11-13T13:42:44.658026982Z"
+    description: Gotenberg is a Docker-powered stateless API for converting HTML, Markdown and Office documents to PDF.
+    digest: e0d45fe56b771c6996916e297f9811dd38a60bab183e98ad84c4dd4c7601fd21
+    home: https://thecodingmachine.github.io/gotenberg/
+    icon: https://user-images.githubusercontent.com/8983173/69229423-ac731300-0b85-11ea-8c2e-2cc00ecdb269.PNG
+    maintainers:
+    - name: kurt108
+      url: https://github.com/kurt108
+    name: gotenberg
+    sources:
+    - https://github.com/thecodingmachine/gotenberg
+    urls:
+    - https://github.com/Kurt108/helm-charts/releases/download/gotenberg-2.1.7/gotenberg-2.1.7.tgz
+    version: 2.1.7
+  thumbor:
+  - apiVersion: v1
+    appVersion: 6.7.5
+    created: "2020-11-13T13:42:44.781423532Z"
+    description: A chart containing Thumbor
+    digest: 10dc509cdfd6e3d45b583c33817cf0a84930177f137e13451eed1729e2482f50
+    home: http://thumbor.org/
+    icon: https://camo.githubusercontent.com/8add159463b5ef31481d1e0cc9fb590cd662fe62/68747470733a2f2f73332e65752d776573742d322e616d617a6f6e6177732e636f6d2f6d696e696d616c2d636f6d706163742f696d616765732f6d632d7468756d626f722e706e67
+    maintainers:
+    - name: kurt108
+    name: thumbor
+    sources:
+    - https://github.com/MinimalCompact/thumbor
+    urls:
+    - https://github.com/Kurt108/helm-charts/releases/download/thumbor-1.0.21/thumbor-1.0.21.tgz
+    version: 1.0.21
+generated: "2020-11-13T13:42:44.548876707Z"
