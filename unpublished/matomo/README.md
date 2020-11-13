@@ -7,11 +7,11 @@ A chart containing Matomo
 
 Current chart version is `0.4.1`
 
-## Based on
+Based on
 
 the fanastic work from Nicolai Schmid: https://github.com/NicolaiSchmid/matomo-helm
 
-## Installing the Chart
+Installing the Chart
 
 ```console
 $ helm repo add kurt108 https://kurt108.github.io/helm-charts
@@ -26,14 +26,14 @@ NAME: my-release
 ...
 ```
 
-## Chart Requirements
+Chart Requirements
 
 | Repository | Name | Version |
 |------------|------|---------|
 | https://kubernetes-charts.storage.googleapis.com/ | mysql | ~1.6.6 |
 | https://kubernetes-charts.storage.googleapis.com/ | redis | ~10.2.1 |
 
-## Chart Values
+Chart Values
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
