@@ -7,7 +7,7 @@ Gotenberg is a Docker-powered stateless API for converting HTML, Markdown and Of
 
 Current chart version is `2.1.5`
 
-## Installing the Chart
+Installing the Chart
 
 ```console
 $ helm repo add kurt108 https://kurt108.github.io/helm-charts

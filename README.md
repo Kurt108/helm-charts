@@ -1,6 +1,6 @@
 # This Repository contains some charts maintaied by kurt108
 
-## Installing Chart
+Installing Chart
 
 ```console
 $ helm repo add kurt108 https://kurt108.github.io/helm-charts
