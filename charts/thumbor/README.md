@@ -4,7 +4,7 @@
 
 A chart containing Thumbor
 
-Version 1.0.22
+Version 1.0.23
 
 Based on the fanastic work from Cloudposse: https://charts.cloudposse.com/incubator/
 
