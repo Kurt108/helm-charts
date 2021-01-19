@@ -12,6 +12,7 @@ conf:
   resultStorageExpirationSeconds: "86400"
   maxAge: "259200"
   maxAgeTempImage: "60"
+  storageExpirationSeconds: "86400"
 
 ingress:
   hosts:
