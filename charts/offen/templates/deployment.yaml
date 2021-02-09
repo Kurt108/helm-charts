@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ template "offen.fullname" . }}
+  labels:
+    chart: {{ template "offen.name" . }}
+    app: {{ template "offen.name" . }}
+    chart: {{ template "offen.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}    
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ template "offen.name" . }}
+      release: {{ .Release.Name }}  
+  template:
+    metadata:
+      labels:
+        app: {{ template "offen.name" . }}
+        release: {{ .Release.Name }}        
+    spec:
+      containers:
+      - name: {{ .Chart.Name }}
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        args:
+          - "serve"
+        ports:
+        - name: http
+          containerPort: 80
+        env:
+        {{- include "helpers.list-env-variables" . | indent 8 }} 
+        - name: OFFEN_DATABASE_CONNECTIONSTRING
+          valueFrom:
+            secretKeyRef:
+              name: {{ template "offen.fullname" . }}-database
+              key: OFFEN_DATABASE_CONNECTIONSTRING              
+        resources:
+{{ toYaml .Values.resources | indent 12 }}

@@ -1,0 +1,11 @@
+profiles:
+  "":
+    deployments:
+      offen:
+        deploymentConfigHash: 44a9ce8397017ca7ed46c86f9a4eac426ed1903605deac9a7e798e7c5b5d78fc
+        helmOverridesHash: 85a74601aae1586f9e7297600af7c38653b386c59194c65ea3bdc85edf137f96
+        helmChartHash: 78998ca29c891bc975c016669a01e0aa0ef17a3cfd9fd1fdf6c64cf653aa8938
+        helmReleaseRevision: "9"
+    lastContext:
+      namespace: offen
+      context: docker-desktop

@@ -1,0 +1,187 @@
+{"level":"info","msg":"Using namespace '\u001b[1;37moffen\u001b[0m'","time":"2021-02-08T16:47:03+01:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mdocker-desktop\u001b[0m'","time":"2021-02-08T16:47:03+01:00"}
+{"level":"info","msg":"Created namespace: offen","time":"2021-02-08T16:47:06+01:00"}
+{"level":"fatal","msg":"error during shouldRebuild check: Dockerfile ./Dockerfile missing: stat ./Dockerfile: no such file or directory","time":"2021-02-08T16:47:07+01:00"}
+{"level":"info","msg":"Using namespace '\u001b[1;37moffen\u001b[0m'","time":"2021-02-08T16:49:09+01:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mdocker-desktop\u001b[0m'","time":"2021-02-08T16:49:09+01:00"}
+{"level":"info","msg":"Skipping building image ${APPNAME}","time":"2021-02-08T16:49:13+01:00"}
+{"level":"fatal","msg":"error deploying: Error deploying offen: Unable to deploy helm chart: error during 'helm upgrade offen ./charts/offen --namespace offen --values /var/folders/mm/v4h_1m093qbdq988gkp4ncq00000gn/T/437061817 --install --kube-context docker-desktop': Release \"offen\" does not exist. Installing it now.\nError: template: offen/templates/deployment.yaml:37:32: executing \"offen/templates/deployment.yaml\" at \u003c{{template \"sulu.fullname\" .}}\u003e: template \"sulu.fullname\" not defined\n =\u003e exit status 1\nRun `\u001b[1;37mdevspace purge -d offen\u001b[0m` and `\u001b[1;37mdevspace deploy\u001b[0m` to recreate the chart","time":"2021-02-08T16:49:15+01:00"}
+{"level":"info","msg":"Using namespace '\u001b[1;37moffen\u001b[0m'","time":"2021-02-08T16:53:44+01:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mdocker-desktop\u001b[0m'","time":"2021-02-08T16:53:44+01:00"}
+{"level":"info","msg":"Skipping building image ${APPNAME}","time":"2021-02-08T16:53:44+01:00"}
+{"level":"fatal","msg":"error deploying: Error deploying offen: Unable to deploy helm chart: error during 'helm upgrade offen ./charts/offen --namespace offen --values /var/folders/mm/v4h_1m093qbdq988gkp4ncq00000gn/T/670534150 --install --kube-context docker-desktop': Release \"offen\" does not exist. Installing it now.\nError: template: offen/templates/secrets.yaml:30:9: executing \"offen/templates/secrets.yaml\" at \u003cindex .Values \"mariadb-galera\" \"enabled\"\u003e: error calling index: index of nil pointer\n =\u003e exit status 1\nRun `\u001b[1;37mdevspace purge -d offen\u001b[0m` and `\u001b[1;37mdevspace deploy\u001b[0m` to recreate the chart","time":"2021-02-08T16:53:47+01:00"}
+{"level":"info","msg":"Using namespace '\u001b[1;37moffen\u001b[0m'","time":"2021-02-08T16:54:22+01:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mdocker-desktop\u001b[0m'","time":"2021-02-08T16:54:22+01:00"}
+{"level":"info","msg":"Skipping building image ${APPNAME}","time":"2021-02-08T16:54:23+01:00"}
+{"level":"fatal","msg":"error deploying: Error deploying offen: Couldn't deploy chart, error reading from chart values charts/offen/values.yaml: yaml: line 43: could not find expected ':'","time":"2021-02-08T16:54:23+01:00"}
+{"level":"info","msg":"Using namespace '\u001b[1;37moffen\u001b[0m'","time":"2021-02-08T16:54:32+01:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mdocker-desktop\u001b[0m'","time":"2021-02-08T16:54:32+01:00"}
+{"level":"info","msg":"Skipping building image ${APPNAME}","time":"2021-02-08T16:54:32+01:00"}
+{"level":"fatal","msg":"error deploying: Error deploying offen: Unable to deploy helm chart: error during 'helm upgrade offen ./charts/offen --namespace offen --values /var/folders/mm/v4h_1m093qbdq988gkp4ncq00000gn/T/594053019 --install --kube-context docker-desktop': Release \"offen\" does not exist. Installing it now.\nError: YAML parse error on offen/templates/deployment.yaml: error converting YAML to JSON: yaml: line 41: did not find expected key\n =\u003e exit status 1\nRun `\u001b[1;37mdevspace purge -d offen\u001b[0m` and `\u001b[1;37mdevspace deploy\u001b[0m` to recreate the chart","time":"2021-02-08T16:54:34+01:00"}
+{"level":"info","msg":"Using namespace '\u001b[1;37moffen\u001b[0m'","time":"2021-02-08T16:55:36+01:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mdocker-desktop\u001b[0m'","time":"2021-02-08T16:55:36+01:00"}
+{"level":"info","msg":"Skipping building image ${APPNAME}","time":"2021-02-08T16:55:36+01:00"}
+{"level":"fatal","msg":"error deploying: Error deploying offen: Unable to deploy helm chart: error during 'helm upgrade offen ./charts/offen --namespace offen --values /var/folders/mm/v4h_1m093qbdq988gkp4ncq00000gn/T/237268811 --install --kube-context docker-desktop': Release \"offen\" does not exist. Installing it now.\nError: YAML parse error on offen/templates/deployment.yaml: error converting YAML to JSON: yaml: line 42: did not find expected key\n =\u003e exit status 1\nRun `\u001b[1;37mdevspace purge -d offen\u001b[0m` and `\u001b[1;37mdevspace deploy\u001b[0m` to recreate the chart","time":"2021-02-08T16:55:39+01:00"}
+{"level":"info","msg":"Using namespace '\u001b[1;37moffen\u001b[0m'","time":"2021-02-08T16:55:49+01:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mdocker-desktop\u001b[0m'","time":"2021-02-08T16:55:49+01:00"}
+{"level":"info","msg":"Skipping building image ${APPNAME}","time":"2021-02-08T16:55:49+01:00"}
+{"level":"fatal","msg":"error deploying: Error deploying offen: Unable to deploy helm chart: error during 'helm upgrade offen ./charts/offen --namespace offen --values /var/folders/mm/v4h_1m093qbdq988gkp4ncq00000gn/T/771838319 --install --kube-context docker-desktop': Release \"offen\" does not exist. Installing it now.\nW0208 16:55:52.628391   44221 warnings.go:67] networking.k8s.io/v1beta1 Ingress is deprecated in v1.19+, unavailable in v1.22+; use networking.k8s.io/v1 Ingress\nError: Secret in version \"v1\" cannot be handled as a Secret: v1.Secret.ObjectMeta: v1.ObjectMeta.TypeMeta: Kind: Data: decode base64: illegal base64 data at input byte 20, error found in #10 byte of ...|/offen.db\"},\"kind\":\"|..., bigger context ...|TABASE_CONNECTIONSTRING\":\"/var/opt/offen/offen.db\"},\"kind\":\"Secret\",\"metadata\":{\"annotations\":{\"meta|...\n =\u003e exit status 1\nRun `\u001b[1;37mdevspace purge -d offen\u001b[0m` and `\u001b[1;37mdevspace deploy\u001b[0m` to recreate the chart","time":"2021-02-08T16:55:52+01:00"}
+{"level":"info","msg":"Using namespace '\u001b[1;37moffen\u001b[0m'","time":"2021-02-08T16:56:15+01:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mdocker-desktop\u001b[0m'","time":"2021-02-08T16:56:15+01:00"}
+{"level":"info","msg":"Skipping building image ${APPNAME}","time":"2021-02-08T16:56:15+01:00"}
+{"level":"fatal","msg":"error deploying: Error deploying offen: Unable to deploy helm chart: error during 'helm upgrade offen ./charts/offen --namespace offen --values /var/folders/mm/v4h_1m093qbdq988gkp4ncq00000gn/T/270784482 --install --kube-context docker-desktop': Error: UPGRADE FAILED: failed to create resource: Secret in version \"v1\" cannot be handled as a Secret: v1.Secret.ObjectMeta: v1.ObjectMeta.TypeMeta: Kind: Data: decode base64: illegal base64 data at input byte 20, error found in #10 byte of ...|/offen.db\"},\"kind\":\"|..., bigger context ...|TABASE_CONNECTIONSTRING\":\"/var/opt/offen/offen.db\"},\"kind\":\"Secret\",\"metadata\":{\"annotations\":{\"meta|...\n =\u003e exit status 1\nRun `\u001b[1;37mdevspace purge -d offen\u001b[0m` and `\u001b[1;37mdevspace deploy\u001b[0m` to recreate the chart","time":"2021-02-08T16:56:18+01:00"}
+{"level":"info","msg":"Using namespace '\u001b[1;37moffen\u001b[0m'","time":"2021-02-08T16:58:10+01:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mdocker-desktop\u001b[0m'","time":"2021-02-08T16:58:10+01:00"}
+{"level":"info","msg":"Skipping building image ${APPNAME}","time":"2021-02-08T16:58:10+01:00"}
+{"level":"info","msg":"Deployed helm chart (Release revision: 3)","time":"2021-02-08T16:58:14+01:00"}
+{"level":"info","msg":"Successfully deployed offen with helm","time":"2021-02-08T16:58:14+01:00"}
+{"level":"info","msg":"DevSpace UI available at: \u001b[1;37mhttp://localhost:8090\u001b[0m","time":"2021-02-08T16:58:14+01:00"}
+{"level":"info","msg":"Starting log streaming","time":"2021-02-08T16:58:14+01:00"}
+{"level":"info","msg":"Change detected in 'charts/offen/templates/deployment.yaml', will reload","time":"2021-02-08T16:58:26+01:00"}
+{"level":"info","msg":"Skipping building image ${APPNAME}","time":"2021-02-08T16:58:26+01:00"}
+{"level":"fatal","msg":"error deploying: Error deploying offen: Unable to deploy helm chart: error during 'helm upgrade offen ./charts/offen --namespace offen --values /var/folders/mm/v4h_1m093qbdq988gkp4ncq00000gn/T/569705923 --install --kube-context docker-desktop': Error: UPGRADE FAILED: YAML parse error on offen/templates/deployment.yaml: error converting YAML to JSON: yaml: line 41: did not find expected key\n =\u003e exit status 1\nRun `\u001b[1;37mdevspace purge -d offen\u001b[0m` and `\u001b[1;37mdevspace deploy\u001b[0m` to recreate the chart","time":"2021-02-08T16:58:28+01:00"}
+{"level":"info","msg":"Using namespace '\u001b[1;37moffen\u001b[0m'","time":"2021-02-08T16:58:35+01:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mdocker-desktop\u001b[0m'","time":"2021-02-08T16:58:35+01:00"}
+{"level":"info","msg":"Skipping building image ${APPNAME}","time":"2021-02-08T16:58:35+01:00"}
+{"level":"fatal","msg":"error deploying: Error deploying offen: Unable to deploy helm chart: error during 'helm upgrade offen ./charts/offen --namespace offen --values /var/folders/mm/v4h_1m093qbdq988gkp4ncq00000gn/T/652279810 --install --kube-context docker-desktop': Error: UPGRADE FAILED: YAML parse error on offen/templates/deployment.yaml: error converting YAML to JSON: yaml: line 41: did not find expected key\n =\u003e exit status 1\nRun `\u001b[1;37mdevspace purge -d offen\u001b[0m` and `\u001b[1;37mdevspace deploy\u001b[0m` to recreate the chart","time":"2021-02-08T16:58:37+01:00"}
+{"level":"info","msg":"Using namespace '\u001b[1;37moffen\u001b[0m'","time":"2021-02-08T17:00:43+01:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mdocker-desktop\u001b[0m'","time":"2021-02-08T17:00:43+01:00"}
+{"level":"info","msg":"Skipping building image ${APPNAME}","time":"2021-02-08T17:00:43+01:00"}
+{"level":"fatal","msg":"error deploying: Error deploying offen: Unable to deploy helm chart: error during 'helm upgrade offen ./charts/offen --namespace offen --values /var/folders/mm/v4h_1m093qbdq988gkp4ncq00000gn/T/031511588 --install --kube-context docker-desktop': Error: UPGRADE FAILED: YAML parse error on offen/templates/deployment.yaml: error converting YAML to JSON: yaml: line 41: did not find expected key\n =\u003e exit status 1\nRun `\u001b[1;37mdevspace purge -d offen\u001b[0m` and `\u001b[1;37mdevspace deploy\u001b[0m` to recreate the chart","time":"2021-02-08T17:00:45+01:00"}
+{"level":"info","msg":"Using namespace '\u001b[1;37moffen\u001b[0m'","time":"2021-02-08T17:01:21+01:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mdocker-desktop\u001b[0m'","time":"2021-02-08T17:01:21+01:00"}
+{"level":"info","msg":"Skipping building image ${APPNAME}","time":"2021-02-08T17:01:22+01:00"}
+{"level":"info","msg":"Deployed helm chart (Release revision: 4)","time":"2021-02-08T17:01:25+01:00"}
+{"level":"info","msg":"Successfully deployed offen with helm","time":"2021-02-08T17:01:25+01:00"}
+{"level":"info","msg":"DevSpace UI available at: \u001b[1;37mhttp://localhost:8090\u001b[0m","time":"2021-02-08T17:01:25+01:00"}
+{"level":"info","msg":"Starting log streaming","time":"2021-02-08T17:01:25+01:00"}
+{"level":"error","msg":"Error in /api/logs?context=docker-desktop\u0026namespace=offen\u0026name=offen-76c797d4d8-7hbc6\u0026container=offen: container \"offen\" in pod \"offen-76c797d4d8-7hbc6\" is waiting to start: trying and failing to pull image","time":"2021-02-08T17:01:54+01:00"}
+{"level":"info","msg":"Change detected in 'devspace.yaml', will reload","time":"2021-02-08T17:03:24+01:00"}
+{"level":"info","msg":"Skipping building image ${APPNAME}","time":"2021-02-08T17:03:24+01:00"}
+{"level":"info","msg":"Skipping deployment offen","time":"2021-02-08T17:03:24+01:00"}
+{"level":"info","msg":"Starting log streaming","time":"2021-02-08T17:03:24+01:00"}
+{"level":"info","msg":"Change detected in 'charts/offen/values.yaml', will reload","time":"2021-02-08T17:03:52+01:00"}
+{"level":"info","msg":"Skipping building image ${APPNAME}","time":"2021-02-08T17:03:52+01:00"}
+{"level":"info","msg":"Deployed helm chart (Release revision: 5)","time":"2021-02-08T17:03:55+01:00"}
+{"level":"info","msg":"Successfully deployed offen with helm","time":"2021-02-08T17:03:55+01:00"}
+{"level":"info","msg":"Starting log streaming","time":"2021-02-08T17:03:55+01:00"}
+{"level":"info","msg":"Change detected in 'devspace.yaml', will reload","time":"2021-02-08T17:04:53+01:00"}
+{"level":"info","msg":"Skipping building image ${APPNAME}","time":"2021-02-08T17:04:53+01:00"}
+{"level":"info","msg":"Deployed helm chart (Release revision: 6)","time":"2021-02-08T17:04:57+01:00"}
+{"level":"info","msg":"Successfully deployed offen with helm","time":"2021-02-08T17:04:57+01:00"}
+{"level":"info","msg":"Starting log streaming","time":"2021-02-08T17:04:57+01:00"}
+{"level":"error","msg":"Error in /api/logs?context=docker-desktop\u0026namespace=offen\u0026name=offen-759cc874-l87hp\u0026container=offen: container \"offen\" in pod \"offen-759cc874-l87hp\" is waiting to start: image can't be pulled","time":"2021-02-08T17:05:08+01:00"}
+{"level":"info","msg":"Change detected in 'devspace.yaml', will reload","time":"2021-02-08T17:06:21+01:00"}
+{"level":"info","msg":"Skipping building image ${APPNAME}","time":"2021-02-08T17:06:21+01:00"}
+{"level":"info","msg":"Deployed helm chart (Release revision: 7)","time":"2021-02-08T17:06:24+01:00"}
+{"level":"info","msg":"Successfully deployed offen with helm","time":"2021-02-08T17:06:24+01:00"}
+{"level":"info","msg":"Starting log streaming","time":"2021-02-08T17:06:24+01:00"}
+{"level":"info","msg":"Using namespace '\u001b[1;37moffen\u001b[0m'","time":"2021-02-08T17:08:15+01:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mdocker-desktop\u001b[0m'","time":"2021-02-08T17:08:15+01:00"}
+{"level":"info","msg":"Skipping building image ${APPNAME}","time":"2021-02-08T17:08:15+01:00"}
+{"level":"info","msg":"Skipping deployment offen","time":"2021-02-08T17:08:16+01:00"}
+{"level":"info","msg":"DevSpace UI available at: \u001b[1;37mhttp://localhost:8090\u001b[0m","time":"2021-02-08T17:08:16+01:00"}
+{"level":"info","msg":"Starting log streaming","time":"2021-02-08T17:08:16+01:00"}
+{"level":"error","msg":"Error in /api/logs?context=docker-desktop\u0026namespace=offen\u0026name=offen-759cc874-l87hp\u0026container=offen: container \"offen\" in pod \"offen-759cc874-l87hp\" is waiting to start: image can't be pulled","time":"2021-02-08T17:08:31+01:00"}
+{"level":"error","msg":"Error in /api/logs?context=docker-desktop\u0026namespace=offen\u0026name=offen-76c797d4d8-7hbc6\u0026container=offen: container \"offen\" in pod \"offen-76c797d4d8-7hbc6\" is waiting to start: trying and failing to pull image","time":"2021-02-08T17:08:34+01:00"}
+{"level":"info","msg":"Change detected in 'devspace.yaml', will reload","time":"2021-02-08T17:08:55+01:00"}
+{"level":"info","msg":"Skipping building image ${APPNAME}","time":"2021-02-08T17:08:55+01:00"}
+{"level":"info","msg":"Deployed helm chart (Release revision: 8)","time":"2021-02-08T17:08:57+01:00"}
+{"level":"info","msg":"Successfully deployed offen with helm","time":"2021-02-08T17:08:57+01:00"}
+{"level":"info","msg":"Starting log streaming","time":"2021-02-08T17:08:57+01:00"}
+{"level":"info","msg":"Using namespace '\u001b[1;37moffen\u001b[0m'","time":"2021-02-08T17:09:55+01:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mdocker-desktop\u001b[0m'","time":"2021-02-08T17:09:55+01:00"}
+{"level":"info","msg":"Successfully deleted deployment offen","time":"2021-02-08T17:09:59+01:00"}
+{"level":"info","msg":"Using namespace '\u001b[1;37moffen\u001b[0m'","time":"2021-02-08T17:10:04+01:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mdocker-desktop\u001b[0m'","time":"2021-02-08T17:10:04+01:00"}
+{"level":"info","msg":"Skipping building image ${APPNAME}","time":"2021-02-08T17:10:04+01:00"}
+{"level":"info","msg":"Deployed helm chart (Release revision: 1)","time":"2021-02-08T17:10:07+01:00"}
+{"level":"info","msg":"Successfully deployed offen with helm","time":"2021-02-08T17:10:07+01:00"}
+{"level":"info","msg":"DevSpace UI available at: \u001b[1;37mhttp://localhost:8090\u001b[0m","time":"2021-02-08T17:10:07+01:00"}
+{"level":"info","msg":"Starting log streaming","time":"2021-02-08T17:10:07+01:00"}
+{"level":"info","msg":"Using namespace '\u001b[1;37moffen\u001b[0m'","time":"2021-02-08T17:10:32+01:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mdocker-desktop\u001b[0m'","time":"2021-02-08T17:10:32+01:00"}
+{"level":"info","msg":"Successfully deleted deployment offen","time":"2021-02-08T17:10:35+01:00"}
+{"level":"info","msg":"Using namespace '\u001b[1;37moffen\u001b[0m'","time":"2021-02-08T17:11:09+01:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mdocker-desktop\u001b[0m'","time":"2021-02-08T17:11:09+01:00"}
+{"level":"info","msg":"Skipping building image ${APPNAME}","time":"2021-02-08T17:11:09+01:00"}
+{"level":"info","msg":"Deployed helm chart (Release revision: 1)","time":"2021-02-08T17:11:12+01:00"}
+{"level":"info","msg":"Successfully deployed offen with helm","time":"2021-02-08T17:11:12+01:00"}
+{"level":"info","msg":"DevSpace UI available at: \u001b[1;37mhttp://localhost:8090\u001b[0m","time":"2021-02-08T17:11:12+01:00"}
+{"level":"info","msg":"Starting log streaming","time":"2021-02-08T17:11:12+01:00"}
+{"level":"info","msg":"Change detected in 'charts/offen/values.yaml', will reload","time":"2021-02-08T17:11:56+01:00"}
+{"level":"info","msg":"Skipping building image ${APPNAME}","time":"2021-02-08T17:11:56+01:00"}
+{"level":"info","msg":"Deployed helm chart (Release revision: 2)","time":"2021-02-08T17:11:59+01:00"}
+{"level":"info","msg":"Successfully deployed offen with helm","time":"2021-02-08T17:11:59+01:00"}
+{"level":"info","msg":"Starting log streaming","time":"2021-02-08T17:11:59+01:00"}
+{"level":"info","msg":"Change detected in 'charts/offen/Chart.yaml', will reload","time":"2021-02-08T17:12:11+01:00"}
+{"level":"info","msg":"Skipping building image ${APPNAME}","time":"2021-02-08T17:12:11+01:00"}
+{"level":"info","msg":"Deployed helm chart (Release revision: 3)","time":"2021-02-08T17:12:13+01:00"}
+{"level":"info","msg":"Successfully deployed offen with helm","time":"2021-02-08T17:12:13+01:00"}
+{"level":"info","msg":"Starting log streaming","time":"2021-02-08T17:12:13+01:00"}
+{"level":"error","msg":"Error in /api/logs?context=docker-desktop\u0026namespace=offen\u0026name=offen-6f5b5c45cb-jtgdh\u0026container=offen: container \"offen\" in pod \"offen-6f5b5c45cb-jtgdh\" is waiting to start: trying and failing to pull image","time":"2021-02-08T17:17:00+01:00"}
+{"level":"info","msg":"Change detected in 'charts/offen/values.yaml', will reload","time":"2021-02-08T17:18:51+01:00"}
+{"level":"info","msg":"Skipping building image ${APPNAME}","time":"2021-02-08T17:18:51+01:00"}
+{"level":"info","msg":"Deployed helm chart (Release revision: 4)","time":"2021-02-08T17:18:55+01:00"}
+{"level":"info","msg":"Successfully deployed offen with helm","time":"2021-02-08T17:18:55+01:00"}
+{"level":"info","msg":"Starting log streaming","time":"2021-02-08T17:18:55+01:00"}
+{"level":"info","msg":"Change detected in 'charts/offen/values.yaml', will reload","time":"2021-02-08T17:19:34+01:00"}
+{"level":"info","msg":"Skipping building image ${APPNAME}","time":"2021-02-08T17:19:34+01:00"}
+{"level":"info","msg":"Deployed helm chart (Release revision: 5)","time":"2021-02-08T17:19:37+01:00"}
+{"level":"info","msg":"Successfully deployed offen with helm","time":"2021-02-08T17:19:37+01:00"}
+{"level":"info","msg":"Starting log streaming","time":"2021-02-08T17:19:37+01:00"}
+{"level":"info","msg":"Change detected in 'charts/offen/values.yaml', will reload","time":"2021-02-08T17:22:35+01:00"}
+{"level":"info","msg":"Skipping building image ${APPNAME}","time":"2021-02-08T17:22:35+01:00"}
+{"level":"info","msg":"Deployed helm chart (Release revision: 6)","time":"2021-02-08T17:22:38+01:00"}
+{"level":"info","msg":"Successfully deployed offen with helm","time":"2021-02-08T17:22:38+01:00"}
+{"level":"info","msg":"Starting log streaming","time":"2021-02-08T17:22:38+01:00"}
+{"level":"info","msg":"Change detected in 'charts/offen/Chart.yaml', will reload","time":"2021-02-08T17:22:45+01:00"}
+{"level":"info","msg":"Skipping building image ${APPNAME}","time":"2021-02-08T17:22:45+01:00"}
+{"level":"info","msg":"Deployed helm chart (Release revision: 7)","time":"2021-02-08T17:22:48+01:00"}
+{"level":"info","msg":"Successfully deployed offen with helm","time":"2021-02-08T17:22:48+01:00"}
+{"level":"info","msg":"Starting log streaming","time":"2021-02-08T17:22:48+01:00"}
+{"level":"info","msg":"Change detected in 'charts/offen/templates/deployment.yaml', will reload","time":"2021-02-08T17:24:13+01:00"}
+{"level":"info","msg":"Skipping building image ${APPNAME}","time":"2021-02-08T17:24:13+01:00"}
+{"level":"info","msg":"Deployed helm chart (Release revision: 8)","time":"2021-02-08T17:24:17+01:00"}
+{"level":"info","msg":"Successfully deployed offen with helm","time":"2021-02-08T17:24:17+01:00"}
+{"level":"info","msg":"Starting log streaming","time":"2021-02-08T17:24:17+01:00"}
+{"level":"error","msg":"Error in /api/logs?context=docker-desktop\u0026namespace=offen\u0026name=offen-dbf49c6-9s4jm\u0026container=offen pipeReader: unexpected EOF","time":"2021-02-08T17:24:31+01:00"}
+{"level":"error","msg":"Error gathering target pods: pods by image name: list pods: Get \"https://kubernetes.docker.internal:6443/api/v1/namespaces/offen/pods\": dial tcp [::1]:6443: connect: connection refused","time":"2021-02-08T17:24:32+01:00"}
+{"level":"error","msg":"Error gathering target pods: pods by image name: list pods: Get \"https://kubernetes.docker.internal:6443/api/v1/namespaces/offen/pods\": dial tcp [::1]:6443: connect: connection refused","time":"2021-02-08T17:24:32+01:00"}
+{"level":"error","msg":"Error gathering target pods: pods by image name: list pods: Get \"https://kubernetes.docker.internal:6443/api/v1/namespaces/offen/pods\": dial tcp [::1]:6443: connect: connection refused","time":"2021-02-08T17:24:32+01:00"}
+{"level":"error","msg":"Error gathering target pods: pods by image name: list pods: Get \"https://kubernetes.docker.internal:6443/api/v1/namespaces/offen/pods\": dial tcp [::1]:6443: connect: connection refused","time":"2021-02-08T17:24:32+01:00"}
+{"level":"error","msg":"Error gathering target pods: pods by image name: list pods: Get \"https://kubernetes.docker.internal:6443/api/v1/namespaces/offen/pods\": dial tcp [::1]:6443: connect: connection refused","time":"2021-02-08T17:24:32+01:00"}
+{"level":"error","msg":"Error gathering target pods: pods by image name: list pods: Get \"https://kubernetes.docker.internal:6443/api/v1/namespaces/offen/pods\": dial tcp [::1]:6443: connect: connection refused","time":"2021-02-08T17:24:32+01:00"}
+{"level":"error","msg":"Error gathering target pods: pods by image name: list pods: Get \"https://kubernetes.docker.internal:6443/api/v1/namespaces/offen/pods\": dial tcp [::1]:6443: connect: connection refused","time":"2021-02-08T17:24:32+01:00"}
+{"level":"error","msg":"Error gathering target pods: pods by image name: list pods: Get \"https://kubernetes.docker.internal:6443/api/v1/namespaces/offen/pods\": dial tcp [::1]:6443: connect: connection refused","time":"2021-02-08T17:24:32+01:00"}
+{"level":"error","msg":"Error gathering target pods: pods by image name: list pods: Get \"https://kubernetes.docker.internal:6443/api/v1/namespaces/offen/pods\": dial tcp [::1]:6443: connect: connection refused","time":"2021-02-08T17:24:32+01:00"}
+{"level":"error","msg":"Error gathering target pods: pods by image name: list pods: Get \"https://kubernetes.docker.internal:6443/api/v1/namespaces/offen/pods\": dial tcp [::1]:6443: connect: connection refused","time":"2021-02-08T17:24:32+01:00"}
+{"level":"error","msg":"Error gathering target pods: pods by image name: list pods: Get \"https://kubernetes.docker.internal:6443/api/v1/namespaces/offen/pods\": dial tcp [::1]:6443: connect: connection refused","time":"2021-02-08T17:24:32+01:00"}
+{"level":"error","msg":"Error gathering target pods: pods by image name: list pods: Get \"https://kubernetes.docker.internal:6443/api/v1/namespaces/offen/pods\": dial tcp [::1]:6443: connect: connection refused","time":"2021-02-08T17:24:32+01:00"}
+{"level":"error","msg":"Error gathering target pods: pods by image name: list pods: Get \"https://kubernetes.docker.internal:6443/api/v1/namespaces/offen/pods\": dial tcp [::1]:6443: connect: connection refused","time":"2021-02-08T17:24:32+01:00"}
+{"level":"error","msg":"Error gathering target pods: pods by image name: list pods: Get \"https://kubernetes.docker.internal:6443/api/v1/namespaces/offen/pods\": dial tcp [::1]:6443: connect: connection refused","time":"2021-02-08T17:24:32+01:00"}
+{"level":"error","msg":"Error gathering target pods: pods by image name: list pods: Get \"https://kubernetes.docker.internal:6443/api/v1/namespaces/offen/pods\": dial tcp [::1]:6443: connect: connection refused","time":"2021-02-08T17:24:33+01:00"}
+{"level":"error","msg":"Error in /api/resource?resource=pods\u0026context=docker-desktop\u0026namespace=offen: request: Get \"https://kubernetes.docker.internal:6443/api/v1/namespaces/offen/pods\": dial tcp [::1]:6443: connect: connection refused","time":"2021-02-08T17:24:33+01:00"}
+{"level":"error","msg":"Error gathering target pods: pods by image name: list pods: Get \"https://kubernetes.docker.internal:6443/api/v1/namespaces/offen/pods\": dial tcp [::1]:6443: connect: connection refused","time":"2021-02-08T17:24:33+01:00"}
+{"level":"error","msg":"Error gathering target pods: pods by image name: list pods: Get \"https://kubernetes.docker.internal:6443/api/v1/namespaces/offen/pods\": dial tcp [::1]:6443: connect: connection refused","time":"2021-02-08T17:24:33+01:00"}
+{"level":"error","msg":"Error gathering target pods: pods by image name: list pods: Get \"https://kubernetes.docker.internal:6443/api/v1/namespaces/offen/pods\": dial tcp [::1]:6443: connect: connection refused","time":"2021-02-08T17:24:33+01:00"}
+{"level":"error","msg":"Error gathering target pods: pods by image name: list pods: Get \"https://kubernetes.docker.internal:6443/api/v1/namespaces/offen/pods\": dial tcp [::1]:6443: connect: connection refused","time":"2021-02-08T17:24:33+01:00"}
+{"level":"error","msg":"Error gathering target pods: pods by image name: list pods: Get \"https://kubernetes.docker.internal:6443/api/v1/namespaces/offen/pods\": dial tcp [::1]:6443: connect: connection refused","time":"2021-02-08T17:24:34+01:00"}
+{"level":"error","msg":"Error gathering target pods: pods by image name: list pods: Get \"https://kubernetes.docker.internal:6443/api/v1/namespaces/offen/pods\": dial tcp [::1]:6443: connect: connection refused","time":"2021-02-08T17:24:34+01:00"}
+{"level":"error","msg":"Error gathering target pods: pods by image name: list pods: Get \"https://kubernetes.docker.internal:6443/api/v1/namespaces/offen/pods\": dial tcp [::1]:6443: connect: connection refused","time":"2021-02-08T17:24:34+01:00"}
+{"level":"error","msg":"Error gathering target pods: pods by image name: list pods: Get \"https://kubernetes.docker.internal:6443/api/v1/namespaces/offen/pods\": dial tcp [::1]:6443: connect: connection refused","time":"2021-02-08T17:24:34+01:00"}
+{"level":"error","msg":"Error in /api/resource?resource=pods\u0026context=docker-desktop\u0026namespace=offen: request: Get \"https://kubernetes.docker.internal:6443/api/v1/namespaces/offen/pods\": dial tcp [::1]:6443: connect: connection refused","time":"2021-02-08T17:24:34+01:00"}
+{"level":"error","msg":"Error gathering target pods: pods by image name: list pods: Get \"https://kubernetes.docker.internal:6443/api/v1/namespaces/offen/pods\": dial tcp [::1]:6443: connect: connection refused","time":"2021-02-08T17:24:34+01:00"}
+{"level":"error","msg":"Error gathering target pods: pods by image name: list pods: Get \"https://kubernetes.docker.internal:6443/api/v1/namespaces/offen/pods\": dial tcp [::1]:6443: connect: connection refused","time":"2021-02-08T17:24:35+01:00"}
+{"level":"warning","msg":"\u001b[1;37mAre you using the correct namespace?\u001b[0m","time":"2021-02-09T06:43:37+01:00"}
+{"level":"warning","msg":"Current namespace: '\u001b[1;37mdefault\u001b[0m'","time":"2021-02-09T06:43:37+01:00"}
+{"level":"warning","msg":"Last    namespace: '\u001b[1;37moffen\u001b[0m'","time":"2021-02-09T06:43:37+01:00"}
+{"level":"info","msg":"Use the '\u001b[1;37m-s / --switch-context\u001b[0m' flag to switch to the context and namespace previously used to deploy this project","time":"2021-02-09T06:43:37+01:00"}
+{"level":"info","msg":"Or use the '\u001b[1;37m--no-warn\u001b[0m' flag to ignore this warning","time":"2021-02-09T06:43:37+01:00"}
+{"level":"info","msg":"Switching to context '\u001b[1;37mdocker-desktop\u001b[0m' and namespace '\u001b[1;37moffen\u001b[0m'","time":"2021-02-09T06:43:44+01:00"}
+{"level":"info","msg":"Using namespace '\u001b[1;37moffen\u001b[0m'","time":"2021-02-09T06:43:44+01:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mdocker-desktop\u001b[0m'","time":"2021-02-09T06:43:44+01:00"}
+{"level":"info","msg":"Skipping building image ${APPNAME}","time":"2021-02-09T06:43:44+01:00"}
+{"level":"info","msg":"Skipping deployment offen","time":"2021-02-09T06:43:45+01:00"}
+{"level":"info","msg":"DevSpace UI available at: \u001b[1;37mhttp://localhost:8090\u001b[0m","time":"2021-02-09T06:43:45+01:00"}
+{"level":"info","msg":"Starting log streaming","time":"2021-02-09T06:43:45+01:00"}

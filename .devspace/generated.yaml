@@ -1,0 +1,16 @@
+vars:
+  APPNAME: offen
+  IMAGE: offen/offen
+profiles:
+  "":
+    deployments:
+      offen:
+        deploymentConfigHash: 5b4a154ca8dd11bacf451a0b7c1a7949558ffe630ad5304499c1bbd7a95dc643
+        helmOverridesHash: ec3c8429eaae041b75c861867b67b27dae4793b7866ecaf6ef27a3e24c50957f
+        helmChartHash: 596d161a4a2df75886493fba66dd0f67244e3a54fd08479fb62aaa515134c400
+        helmReleaseRevision: "8"
+    images:
+      ${APPNAME}: {}
+    lastContext:
+      namespace: offen
+      context: docker-desktop

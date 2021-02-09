@@ -1,0 +1,7 @@
+{"level":"info","msg":"Using namespace '\u001b[1;37moffen\u001b[0m'","time":"2021-02-09T06:48:05+01:00"}
+{"level":"info","msg":"Using kube context '\u001b[1;37mdocker-desktop\u001b[0m'","time":"2021-02-09T06:48:05+01:00"}
+{"level":"info","msg":"Skipping building image offen","time":"2021-02-09T06:48:06+01:00"}
+{"level":"info","msg":"Deployed helm chart (Release revision: 9)","time":"2021-02-09T06:48:09+01:00"}
+{"level":"info","msg":"Successfully deployed offen with helm","time":"2021-02-09T06:48:09+01:00"}
+{"level":"info","msg":"DevSpace UI available at: \u001b[1;37mhttp://localhost:8090\u001b[0m","time":"2021-02-09T06:48:09+01:00"}
+{"level":"info","msg":"Starting log streaming","time":"2021-02-09T06:48:09+01:00"}

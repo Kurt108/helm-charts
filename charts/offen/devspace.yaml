@@ -1,0 +1,31 @@
+version: v1beta9
+images:       
+  offen:
+    image: offen
+    build:
+      disabled: true       
+deployments:
+- name: offen
+  helm:
+    componentChart: false
+    chart:
+      name: ./
+    valuesFiles:                      
+    - ./values.yaml
+dev:
+  autoReload:
+    paths:
+    - ./
+    images:
+    - offen
+    deployments:
+    - offen
+profiles:
+- name: production
+  patches:
+  - op: remove
+    path: images.app.injectRestartHelper
+  - op: remove
+    path: images.app.appendDockerfileInstructions
+
+

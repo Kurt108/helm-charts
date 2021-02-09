@@ -1,0 +1,43 @@
+replicaCount: 1
+env:
+  open:
+    OFFEN_SERVER_REVERSEPROXY: true
+    # OFFEN_DATABASE_DIALECT: sqlite
+    OFFEN_SMTP_HOST: mailhog
+  secret:
+    # OFFEN_DATABASE_CONNECTIONSTRING=user:pass@tcp(localhost:3306)/offen?parseTime=true
+    OFFEN_SECRETS: as_env_var
+
+ingress:
+  hosts:
+    - "offen.domain"
+
+image:
+  repository: index.docker.io/offen/offen
+  tag: v0.3.0
+  pullPolicy: IfNotPresent
+
+service:
+  name: offen
+  type: ClusterIP
+
+
+
+resources:
+  limits:
+    cpu: 1
+    memory: 512Mi
+  requests:
+    cpu: 0.5
+    memory: 512Mi
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 1
+  targetCPUUtilizationPercentage: 80
+
+
+mariadb-galera:
+  enabled: false
+  remote: false
