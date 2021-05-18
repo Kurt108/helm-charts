@@ -30,7 +30,7 @@ data:
     SVG_DPI = 150
     MAX_AGE = {{ .Values.conf.maxAge }}
     MAX_AGE_TEMP_IMAGE = {{ .Values.conf.maxAgeTempImage }}
-    RESPECT_ORIENTATION = False
+    RESPECT_ORIENTATION = {{ .Values.conf.respectOrientation }}
     IGNORE_SMART_ERRORS = False
     SEND_IF_MODIFIED_LAST_MODIFIED_HEADERS = False
     PRESERVE_EXIF_INFO = False
