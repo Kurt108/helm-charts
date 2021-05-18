@@ -1,11 +1,10 @@
 [![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/kurt108)](https://artifacthub.io/packages/search?repo=kurt108)
 
+# # thumbor
 
-# thumbor
-=======
 A chart containing Thumbor
 
-Current chart version is `1.0.13`
+1.0.14
 
 ## Based on
 
@@ -26,9 +25,7 @@ NAME: my-release
 ...
 ```
 
-
-
-## Chart Values
+## Values
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
@@ -37,6 +34,7 @@ NAME: my-release
 | autoscaling.minReplicas | int | `1` |  |
 | autoscaling.targetCPUUtilizationPercentage | int | `80` |  |
 | conf.allowedSources | string | `"'http://domain_or_wildcard', 'comma_seperated'"` |  |
+| conf.respectOrientation | string | `"False"` |  |
 | env.open.ALLOW_UNSAFE_URL | string | `"True"` |  |
 | env.open.AUTO_WEBP | string | `"True"` |  |
 | env.open.CORS_ALLOW_ORIGIN | string | `"*"` |  |

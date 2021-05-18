@@ -120,7 +120,7 @@ data:
     ## Indicates whether thumbor should rotate images that have an Orientation EXIF
     ## header
     ## Defaults to: False
-    RESPECT_ORIENTATION = False
+    RESPECT_ORIENTATION = {{ .Values.conf.respectOrientation }}
     
     ## Ignore errors during smart detections and return image as a temp image (not
     ## saved in result storage and with MAX_AGE_TEMP_IMAGE age)
