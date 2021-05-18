@@ -4,7 +4,7 @@
 
 A chart containing Thumbor
 
-1.0.14
+1.0.24
 
 ## Based on
 
