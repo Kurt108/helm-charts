@@ -3,11 +3,9 @@
 
 # thumbor
 
-
 A chart containing Thumbor
 
 1.0.24
-
 
 Based on the fanastic work from Cloudposse: https://charts.cloudposse.com/incubator/
 
@@ -36,9 +34,9 @@ NAME: my-release
 | autoscaling.targetCPUUtilizationPercentage | int | `80` |  |
 | conf.allowUnsafeUrl | string | `"True"` |  |
 | conf.allowedSources | string | `"'http://domain_or_wildcard', 'comma_seperated'"` |  |
-| conf.respectOrientation | string | `"False"` |  |
 | conf.maxAge | string | `"259200"` |  |
 | conf.maxAgeTempImage | string | `"60"` |  |
+| conf.respectOrientation | string | `"False"` |  |
 | conf.resultStorage | string | `"'thumbor.result_storages.file_storage'"` |  |
 | conf.resultStorageExpirationSeconds | string | `"86400"` |  |
 | conf.storageExpirationSeconds | string | `"86400"` |  |
