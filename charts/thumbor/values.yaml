@@ -3,6 +3,10 @@ env:
   open:
     LOG_LEVEL: "error"
     THUMBOR_PORT: "80"
+    ALLOW_UNSAFE_URL: "True"
+    AUTO_WEBP: "True"
+    CORS_ALLOW_ORIGIN: "*"
+    HEALTHCHECK_ROUTE: "/healthcheck"
 
 # Some Configs should be set via config-file and not as environment variable
 conf:
