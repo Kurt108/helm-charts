@@ -7,7 +7,6 @@ Gotenberg is a Docker-powered stateless API for converting HTML, Markdown and Of
 2.1.9
 =======
 
-
 Installing the Chart
 
 ```console
