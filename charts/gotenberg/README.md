@@ -5,7 +5,9 @@
 Gotenberg is a Docker-powered stateless API for converting HTML, Markdown and Office documents to PDF.
 
 2.1.9
-=======
+
+
+
 
 Installing the Chart
 
