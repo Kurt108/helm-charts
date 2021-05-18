@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
       - name: Run chart-testing (lint)
-        uses: helm/chart-testing-action@master
+        uses: helm/chart-testing-action@main
         with:
           command: lint
           config: .github/ct.yaml
@@ -73,7 +73,7 @@ jobs:
         with:
           node_image: kindest/node:${{ matrix.k8s }}
       - name: Run chart-testing (install)
-        uses: helm/chart-testing-action@master
+        uses: helm/chart-testing-action@main
         with:
           command: install
           config: .github/ct.yaml      
