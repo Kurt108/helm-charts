@@ -1,11 +1,10 @@
 [![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/kurt108)](https://artifacthub.io/packages/search?repo=kurt108)
 
-
 # thumbor
 
 A chart containing Thumbor
 
-1.0.24
+1.0.25
 
 Based on the fanastic work from Cloudposse: https://charts.cloudposse.com/incubator/
 
