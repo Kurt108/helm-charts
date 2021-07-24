@@ -69,6 +69,22 @@ entries:
     urls:
     - https://github.com/Kurt108/helm-charts/releases/download/gotenberg-2.1.7/gotenberg-2.1.7.tgz
     version: 2.1.7
+  statping:
+  - apiVersion: v1
+    appVersion: v.0.90.74
+    created: "2021-07-24T21:36:30.579686231Z"
+    description: A chart containing statping
+    digest: 79a6a415b9737856eb009e3cbaf59aa5a37994ff0898d13d1915da9282fa123f
+    home: https://github.com/statping/statping
+    icon: https://camo.githubusercontent.com/adc90af589fd69235a49fc1e71eb55d6a9a9890c786ebcd578d1ac04fe8a884f/68747470733a2f2f73332d75732d776573742d322e616d617a6f6e6177732e636f6d2f676974696d67732f7374617470696e672e706e67
+    maintainers:
+    - name: kurt108
+    name: statping
+    sources:
+    - https://github.com/statping/statping
+    urls:
+    - https://github.com/Kurt108/helm-charts/releases/download/statping-0.0.1/statping-0.0.1.tgz
+    version: 0.0.1
   thumbor:
   - apiVersion: v1
     appVersion: 6.7.5
@@ -145,4 +161,4 @@ entries:
     urls:
     - https://github.com/Kurt108/helm-charts/releases/download/thumbor-1.0.21/thumbor-1.0.21.tgz
     version: 1.0.21
-generated: "2021-07-23T10:04:09.222595724Z"
+generated: "2021-07-24T21:36:30.579830632Z"
