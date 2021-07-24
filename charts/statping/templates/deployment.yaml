@@ -20,6 +20,14 @@ spec:
         app: {{ template "statping.name" . }}
         release: {{ .Release.Name }}        
     spec:
+      volumes:
+      - name: {{ template "statping.fullname" . }}-storage
+        {{- if .Values.persistence.enabled }}
+        persistentVolumeClaim:
+          claimName: {{ .Values.persistence.existingClaim | default (include "statping.fullname" .) }}-storage
+        {{- else }}
+        emptyDir: {}
+        {{ end }}    
       containers:
       - name: {{ .Chart.Name }}
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
@@ -36,3 +44,7 @@ spec:
 {{- end }}      
         resources:
 {{ toYaml .Values.resources | indent 12 }}
+        volumeMounts:
+        - name: {{ template "statping.fullname" . }}-storage
+          mountPath: /app
+          readOnly: false

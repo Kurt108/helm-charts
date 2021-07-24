@@ -4,7 +4,7 @@
 
 A chart containing statping
 
-0.0.1
+0.0.2
 
 Installing the Chart
 

@@ -33,3 +33,8 @@ service:
 
 resources: {}
 
+persistence:
+  enabled: false
+  storageClass: generic
+  accessMode: ReadWriteOnce
+  size: 8Gi
