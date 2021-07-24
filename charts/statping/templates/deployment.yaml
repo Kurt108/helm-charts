@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ template "statping.fullname" . }}
+  labels:
+    chart: {{ template "statping.name" . }}
+    app: {{ template "statping.name" . }}
+    chart: {{ template "statping.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}    
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ template "statping.name" . }}
+      release: {{ .Release.Name }}  
+  template:
+    metadata:
+      labels:
+        app: {{ template "statping.name" . }}
+        release: {{ .Release.Name }}        
+    spec:
+      containers:
+      - name: {{ .Chart.Name }}
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        ports:
+        - name: http
+          containerPort: 8080
+        env:
+{{- range $name, $value := .Values.env.open }}
+{{- if not (empty $value) }}
+        - name: {{ $name | quote }}
+          value: {{ $value | quote }}
+{{- end }}
+{{- end }}      
+        resources:
+{{ toYaml .Values.resources | indent 12 }}

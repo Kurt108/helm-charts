@@ -1,0 +1,49 @@
+{{- $fullName := include "statping.fullname" . -}}
+{{- $servicePath := .Values.ingress.path -}}
+{{- if .Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+apiVersion: networking.k8s.io/v1
+{{- else if .Capabilities.APIVersions.Has "networking.k8s.io/v1beta1/Ingress" }}
+apiVersion: networking.k8s.io/v1beta1
+{{- end }}  
+kind: Ingress
+metadata:
+  name: {{ $fullName }}
+  {{- if .Values.ingress.annotations }}
+  annotations:
+{{ toYaml .Values.ingress.annotations | indent 4 }}
+{{- end }}
+  labels:
+    app: {{ template "statping.name" . }}
+    chart: {{ template "statping.chart" . }}
+    heritage: {{ .Release.Service }}
+    release: {{ .Release.Name }}
+{{- if .labels }}
+{{ toYaml .labels | indent 4 }}
+{{- end }}
+spec:
+  rules:
+{{- if .Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+    {{- range $host := .Values.ingress.hosts }}
+    - host: {{ $host }}
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ $fullName }}
+                port: 
+                  number: 8080  
+{{- end }}
+{{- else if .Capabilities.APIVersions.Has "networking.k8s.io/v1beta1/Ingress" }}
+    {{- range $host := .Values.ingress.hosts }}
+    - host: {{ $host }}
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: {{ $fullName }}
+              servicePort: 8080
+{{- end }}
+{{- end }}
+

@@ -1,0 +1,29 @@
+[![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/kurt108)](https://artifacthub.io/packages/search?repo=kurt108)
+
+
+{{ template "chart.header" . }}
+{{ template "chart.description" . }}
+
+
+{{ template "chart.version" . }}
+
+
+
+Installing the Chart
+
+```console
+$ helm repo add kurt108 https://kurt108.github.io/helm-charts
+"kurt108" has been added to your repositories
+$ helm repo update
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "kurt108" chart repository
+...
+Update Complete. ⎈ Happy Helming!⎈
+$ helm install my-release kurt108/statping
+NAME: my-release
+...
+```
+
+{{ template "chart.requirementsSection" . }}
+
+{{- template "chart.valuesSection" . -}}

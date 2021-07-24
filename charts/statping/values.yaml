@@ -1,0 +1,35 @@
+replicaCount: 1
+
+env:
+  open:
+    VIRTUAL_HOST: localhost
+    VIRTUAL_PORT: 8080
+    DB_HOST: postgres
+    DB_USER: statup
+    DB_PASS: password123
+    DB_DATABASE: statup
+    NAME: STATPING
+    DESCRIPTION: This is a Statping instance
+
+ingress:
+  enabled: true
+  hosts:
+    - "statping.domain"
+  # Use this if you are using Traefik as your ingress-router
+  # path: "/scale"
+  # Use this if you are using nginx as your ingress-router
+  path: "/"
+  annotations: {}
+
+image:
+  repository: statping/statping
+  tag: v0.90.74
+  pullPolicy: IfNotPresent
+
+service:
+  name: statping
+  type: ClusterIP
+
+
+resources: {}
+
