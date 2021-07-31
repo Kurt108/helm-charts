@@ -18,6 +18,9 @@ conf:
   maxAge: "259200"
   maxAgeTempImage: "60"
   storageExpirationSeconds: "86400"
+  detectors: ""
+
+
 
 ingress:
   hosts:

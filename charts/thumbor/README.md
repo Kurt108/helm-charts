@@ -4,7 +4,7 @@
 
 A chart containing Thumbor
 
-1.0.25
+1.0.26
 
 Based on the fanastic work from Cloudposse: https://charts.cloudposse.com/incubator/
 
