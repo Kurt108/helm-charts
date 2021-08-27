@@ -5,9 +5,13 @@
 replicaCount: 1
 
 image:
-  repository: thecodingmachine/gotenberg
-  tag: 6.3.0
+  repository: gotenberg/gotenberg
+  tag: 7.0.3
   pullPolicy: IfNotPresent
+
+env:
+  open:
+    GOTENBERG_VERSION: "7.0.3"
 
 service:
   type: ClusterIP

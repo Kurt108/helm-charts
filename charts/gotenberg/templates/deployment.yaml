@@ -37,6 +37,13 @@ spec:
             - name: http
               containerPort: {{ .Values.service.port }}
               protocol: TCP
+          env:
+          {{- range $name, $value := .Values.env.open }}
+          {{- if not (empty $value) }}
+            - name: {{ $name | quote }}
+              value: {{ $value | quote }}
+          {{- end }}
+          {{- end }}              
           livenessProbe:
             httpGet:
               path: /ping
