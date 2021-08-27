@@ -37,8 +37,8 @@ NAME: my-release
 | basicAuth.username | string | `"convert"` |  |
 | env.open.GOTENBERG_VERSION | string | `"7.0.3"` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
-| image.repository | string | `"thecodingmachine/gotenberg"` |  |
-| image.tag | string | `"6.3.0"` |  |
+| image.repository | string | `"gotenberg/gotenberg"` |  |
+| image.tag | string | `"7.0.3"` |  |
 | ingress.annotations | object | `{}` |  |
 | ingress.enabled | bool | `false` |  |
 | ingress.hosts[0] | string | `"gotenberg.local"` |  |
