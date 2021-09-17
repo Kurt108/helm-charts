@@ -18,7 +18,9 @@ spec:
     metadata:
       labels:
         app: {{ template "thumbor.name" . }}
-        release: {{ .Release.Name }}        
+        release: {{ .Release.Name }}   
+      annotations:
+        checksum/config: {{ include (print $.Template.BasePath "/configmap.yaml") . | sha256sum }}             
     spec:
       volumes:
       - name: {{ template "thumbor.fullname" . }}-storage

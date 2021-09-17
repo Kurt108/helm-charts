@@ -1,0 +1,12 @@
+apiVersion: v1
+name: statping
+icon: https://camo.githubusercontent.com/adc90af589fd69235a49fc1e71eb55d6a9a9890c786ebcd578d1ac04fe8a884f/68747470733a2f2f73332d75732d776573742d322e616d617a6f6e6177732e636f6d2f676974696d67732f7374617470696e672e706e67
+version: 0.0.2
+appVersion: "v.0.90.74"
+description: A chart containing statping
+home: https://github.com/statping/statping
+sources:
+  - https://github.com/statping/statping
+maintainers:
+  - name: kurt108
+deprecated: false
