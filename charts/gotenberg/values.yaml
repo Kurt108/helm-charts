@@ -12,6 +12,8 @@ image:
 env:
   open:
     GOTENBERG_VERSION: "7.0.3"
+    LOG_FORMAT: "TEXT"
+    LOG_LEVEL: "DEBUG"
 
 service:
   type: ClusterIP
