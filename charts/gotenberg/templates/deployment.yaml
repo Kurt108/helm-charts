@@ -26,7 +26,6 @@ spec:
         checksum/config: {{ include (print $.Template.BasePath "/secrets.yaml") . | sha256sum }}
     spec:
       securityContext:
-        privileged: false
         runAsUser: 1001
         runAsGroup: 1001
         fsGroup: 1001
