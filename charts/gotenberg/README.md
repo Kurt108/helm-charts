@@ -1,18 +1,18 @@
 # gotenberg
 
 Gotenberg is a Docker-powered stateless API for converting HTML, Markdown and Office documents to PDF.
-4.0.0
+4.0.1
 [![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/kurt108)](https://artifacthub.io/packages/search?repo=kurt108)
 
 =======
 
-## Versions:
+## Versions
 
- * 2.x: Gotenberg 6
- * 3.x: Gotenberg 7, K8s Version >=1.19
- * 4.x: Gotenberg 7, Fixed Ingress Warnings
+* 2.x: Gotenberg 6
+* 3.x: Gotenberg 7, K8s Version >=1.19
+* 4.x: Gotenberg 7, Fixed Ingress Warnings
 
-# Installing the Chart
+## Installing the Chart
 
 ```console
 $ helm repo add kurt108 https://kurt108.github.io/helm-charts
