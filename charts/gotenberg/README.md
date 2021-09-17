@@ -1,7 +1,7 @@
 # gotenberg
 
 Gotenberg is a Docker-powered stateless API for converting HTML, Markdown and Office documents to PDF.
-3.0.0
+4.0.0
 [![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/kurt108)](https://artifacthub.io/packages/search?repo=kurt108)
 
 =======
@@ -39,9 +39,11 @@ NAME: my-release
 | image.repository | string | `"gotenberg/gotenberg"` |  |
 | image.tag | string | `"7.0.3"` |  |
 | ingress.annotations | object | `{}` |  |
+| ingress.className | string | `""` |  |
 | ingress.enabled | bool | `false` |  |
-| ingress.hosts[0] | string | `"gotenberg.local"` |  |
-| ingress.path | string | `"/"` |  |
+| ingress.hosts[0].host | string | `"gotenberg.local"` |  |
+| ingress.hosts[0].paths[0].path | string | `"/"` |  |
+| ingress.hosts[0].paths[0].pathType | string | `"Prefix"` |  |
 | ingress.tls | list | `[]` |  |
 | nodeSelector | object | `{}` |  |
 | replicaCount | int | `1` |  |
