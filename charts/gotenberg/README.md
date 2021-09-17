@@ -1,7 +1,7 @@
 # gotenberg
 
 Gotenberg is a Docker-powered stateless API for converting HTML, Markdown and Office documents to PDF.
-4.0.4
+4.0.5
 [![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/kurt108)](https://artifacthub.io/packages/search?repo=kurt108)
 
 =======
@@ -41,6 +41,8 @@ NAME: my-release
 | basicAuth.passwordMD5 | string | `"$apr1$zQ7F0fKS$X3aXkUCufHQlVe51VWUKu1"` |  |
 | basicAuth.username | string | `"convert"` |  |
 | env.open.GOTENBERG_VERSION | string | `"7.0.3"` |  |
+| env.open.LOG_FORMAT | string | `"TEXT"` |  |
+| env.open.LOG_LEVEL | string | `"DEBUG"` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.repository | string | `"gotenberg/gotenberg"` |  |
 | image.tag | string | `"7.0.3"` |  |
