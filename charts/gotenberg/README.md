@@ -1,13 +1,18 @@
-[![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/kurt108)](https://artifacthub.io/packages/search?repo=kurt108)
-
 # gotenberg
 
 Gotenberg is a Docker-powered stateless API for converting HTML, Markdown and Office documents to PDF.
+4.0.0
+[![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/kurt108)](https://artifacthub.io/packages/search?repo=kurt108)
 
-2.1.10
 =======
 
-Installing the Chart
+## Versions:
+
+ * 2.x: Gotenberg 6
+ * 3.x: Gotenberg 7, K8s Version >=1.19
+ * 4.x: Gotenberg 7, Fixed Ingress Warnings
+
+# Installing the Chart
 
 ```console
 $ helm repo add kurt108 https://kurt108.github.io/helm-charts
@@ -35,13 +40,16 @@ NAME: my-release
 | basicAuth.enabled | bool | `false` |  |
 | basicAuth.passwordMD5 | string | `"$apr1$zQ7F0fKS$X3aXkUCufHQlVe51VWUKu1"` |  |
 | basicAuth.username | string | `"convert"` |  |
+| env.open.GOTENBERG_VERSION | string | `"7.0.3"` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
-| image.repository | string | `"thecodingmachine/gotenberg"` |  |
-| image.tag | string | `"6.3.0"` |  |
+| image.repository | string | `"gotenberg/gotenberg"` |  |
+| image.tag | string | `"7.0.3"` |  |
 | ingress.annotations | object | `{}` |  |
+| ingress.className | string | `""` |  |
 | ingress.enabled | bool | `false` |  |
-| ingress.hosts[0] | string | `"gotenberg.local"` |  |
-| ingress.path | string | `"/"` |  |
+| ingress.hosts[0].host | string | `"gotenberg.local"` |  |
+| ingress.hosts[0].paths[0].path | string | `"/"` |  |
+| ingress.hosts[0].paths[0].pathType | string | `"Prefix"` |  |
 | ingress.tls | list | `[]` |  |
 | nodeSelector | object | `{}` |  |
 | replicaCount | int | `1` |  |
