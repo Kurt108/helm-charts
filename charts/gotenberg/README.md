@@ -1,7 +1,7 @@
 # gotenberg
 
 Gotenberg is a Docker-powered stateless API for converting HTML, Markdown and Office documents to PDF.
-4.0.6
+5.0.0
 [![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/kurt108)](https://artifacthub.io/packages/search?repo=kurt108)
 
 =======
@@ -11,6 +11,7 @@ Gotenberg is a Docker-powered stateless API for converting HTML, Markdown and Of
 * 2.x: Gotenberg 6
 * 3.x: Gotenberg 7, K8s Version >=1.19
 * 4.x: Gotenberg 7, Fixed Ingress Warnings
+* 5.x: Gotenberg 7, PDB and VPA
 
 ## Installing the Chart
 
@@ -48,14 +49,18 @@ NAME: my-release
 | image.tag | string | `"7.0.3"` |  |
 | ingress.annotations | object | `{}` |  |
 | ingress.className | string | `""` |  |
-| ingress.enabled | bool | `false` |  |
+| ingress.enabled | bool | `true` |  |
 | ingress.hosts[0].host | string | `"gotenberg.local"` |  |
 | ingress.hosts[0].paths[0].path | string | `"/"` |  |
 | ingress.hosts[0].paths[0].pathType | string | `"Prefix"` |  |
 | ingress.tls | list | `[]` |  |
 | nodeSelector | object | `{}` |  |
+| podDisruptionBudget.enabled | bool | `false` |  |
+| podDisruptionBudget.maxUnavailable | int | `1` |  |
 | replicaCount | int | `1` |  |
 | resources | object | `{}` |  |
 | service.port | int | `3000` |  |
 | service.type | string | `"ClusterIP"` |  |
 | tolerations | list | `[]` |  |
+| verticalAutoscaling.enabled | bool | `false` |  |
+| verticalAutoscaling.minAllowed | string | `"50m"` |  |

@@ -1,0 +1,23 @@
+{{- if .Values.verticalAutoscaling.enabled }}
+apiVersion: autoscaling.k8s.io/v1
+kind: VerticalPodAutoscaler
+metadata:
+  name: {{ include "gotenberg.fullname" . }}
+  labels:
+    app: {{ template "gotenberg.name" . }}
+    chart: {{ template "gotenberg.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  targetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: {{ include "gotenberg.fullname" . }}
+  updatePolicy:
+    updateMode: Auto
+  resourcePolicy:
+    containerPolicies:
+      - containerName: {{ .Chart.Name }}
+        minAllowed:
+            cpu: {{ .Values.verticalAutoscaling.minAllowed }}
+{{- end }}
