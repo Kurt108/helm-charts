@@ -1,0 +1,18 @@
+{{- if .Values.podDisruptionBudget.enabled }}
+---
+apiVersion: policy/v1beta1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ include "gotenberg.fullname" . }}
+  labels:
+    app: {{ template "gotenberg.name" . }}
+    chart: {{ template "gotenberg.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ template "gotenberg.name" . }}
+      release: {{ .Release.Name }}
+  maxUnavailable: {{ .Values.podDisruptionBudget.maxUnavailable }}
+{{- end }}

@@ -3,7 +3,7 @@ appVersion: "7.0.3"
 description: Gotenberg is a Docker-powered stateless API for converting HTML, Markdown and Office documents to PDF.
 name: gotenberg
 icon: https://user-images.githubusercontent.com/8983173/69229423-ac731300-0b85-11ea-8c2e-2cc00ecdb269.PNG
-version: 4.0.6
+version: 5.0.0
 home: https://thecodingmachine.github.io/gotenberg/
 sources:
   - https://github.com/thecodingmachine/gotenberg
