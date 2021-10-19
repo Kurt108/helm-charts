@@ -26,7 +26,7 @@ basicAuth:
 
 ingress:
   enabled: true
-  className: ""  
+  className: ""
   annotations: {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
@@ -62,3 +62,11 @@ tolerations: []
 affinity: {}
 
 annotations: {}
+
+verticalAutoscaling:
+  enabled: false
+  minAllowed: 50m
+
+podDisruptionBudget:
+  enabled: false
+  maxUnavailable: 1
