@@ -62,3 +62,4 @@ NAME: my-release
 | resources.requests.memory | string | `"512Mi"` |  |
 | service.name | string | `"thumbor"` |  |
 | service.type | string | `"ClusterIP"` |  |
+| affinity | dictionary | `{}` | Affinity for pod assignment |
