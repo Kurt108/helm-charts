@@ -6,6 +6,9 @@ metadata:
     app: {{ template "gotenberg.name" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
+    {{- if .Values.service.labels }}
+    {{ toYaml .Values.service.labels }}
+    {{- end }}
 spec:
   type: {{ .Values.service.type }}
   ports:
