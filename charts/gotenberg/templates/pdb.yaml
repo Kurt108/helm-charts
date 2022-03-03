@@ -5,6 +5,7 @@ kind: PodDisruptionBudget
 metadata:
   name: {{ include "gotenberg.fullname" . }}
   labels:
+    {{ include "gotenberg.labels" . | nindent 4 }}
     app: {{ template "gotenberg.name" . }}
     chart: {{ template "gotenberg.chart" . }}
     release: {{ .Release.Name }}
@@ -12,7 +13,6 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: {{ template "gotenberg.name" . }}
-      release: {{ .Release.Name }}
+      {{- include "gotenberg.selectorLabels" . | nindent 6 }}
   maxUnavailable: {{ .Values.podDisruptionBudget.maxUnavailable }}
 {{- end }}

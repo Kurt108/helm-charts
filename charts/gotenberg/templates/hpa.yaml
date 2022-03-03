@@ -4,6 +4,7 @@ kind: HorizontalPodAutoscaler
 metadata:
   name: {{ include "gotenberg.fullname" . }}
   labels:
+    {{ include "gotenberg.labels" . | nindent 4 }}
     app: {{ template "gotenberg.name" . }}
     release: {{ .Release.Name }}
 spec:

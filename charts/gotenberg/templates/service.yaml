@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: {{ template "gotenberg.fullname" . }}
   labels:
+    {{ include "gotenberg.labels" . | nindent 4 }}
     app: {{ template "gotenberg.name" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
@@ -17,5 +18,4 @@ spec:
       protocol: TCP
       name: http
   selector:
-    app: {{ template "gotenberg.name" . }}
-    release: {{ .Release.Name }}
+    {{- include "gotenberg.selectorLabels" . | nindent 4 }}
