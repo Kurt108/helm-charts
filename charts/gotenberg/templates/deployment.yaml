@@ -3,9 +3,9 @@ kind: Deployment
 metadata:
   name: {{ template "gotenberg.fullname" . }}
   labels:
+    {{ include "gotenberg.labels" . | nindent 4 }}
     app: {{ template "gotenberg.name" . }}
     chart: {{ template "gotenberg.chart" . }}
-    release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
   annotations:
 {{- if .Values.annotations }}
@@ -15,13 +15,11 @@ spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ template "gotenberg.name" . }}
-      release: {{ .Release.Name }}
+      {{- include "gotenberg.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       labels:
-        app: {{ template "gotenberg.name" . }}
-        release: {{ .Release.Name }}
+        {{- include "gotenberg.selectorLabels" . | nindent 8 }}
       annotations:
         checksum/config: {{ include (print $.Template.BasePath "/secrets.yaml") . | sha256sum }}
     spec:
@@ -43,19 +41,19 @@ spec:
             - name: {{ $name | quote }}
               value: {{ $value | quote }}
           {{- end }}
-          {{- end }}              
+          {{- end }}
           livenessProbe:
             httpGet:
               path: /health
               port: {{ .Values.service.port }}
             initialDelaySeconds: 5
-            periodSeconds: 60  
+            periodSeconds: 60
           readinessProbe:
             httpGet:
               path: /health
               port: {{ .Values.service.port }}
             initialDelaySeconds: 5
-            periodSeconds: 60                
+            periodSeconds: 60
           resources:
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}

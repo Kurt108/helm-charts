@@ -1,7 +1,7 @@
 # thumbor
 
 A chart containing Thumbor
-1.0.29
+1.0.30
 [![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/kurt108)](https://artifacthub.io/packages/search?repo=kurt108)
 
 
