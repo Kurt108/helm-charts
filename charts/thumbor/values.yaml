@@ -65,8 +65,8 @@ autoscaling:
   maxReplicas: 1
   targetCPUUtilizationPercentage: 80
 
-# affinity example:
-#
+# -- Affinity for Pod assignment
+affinity: {} 
 #affinity:
 #  nodeAffinity:
 #    requiredDuringSchedulingIgnoredDuringExecution:
