@@ -4,7 +4,6 @@ A chart containing Thumbor
 1.0.30
 [![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/kurt108)](https://artifacthub.io/packages/search?repo=kurt108)
 
-
 Based on the fanastic work from Cloudposse: https://charts.cloudposse.com/incubator/
 
 ## Installing the Chart
@@ -26,6 +25,7 @@ NAME: my-release
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
+| affinity | object | `{}` | Affinity for Pod assignment |
 | autoscaling.enabled | bool | `false` |  |
 | autoscaling.maxReplicas | int | `1` |  |
 | autoscaling.minReplicas | int | `1` |  |
@@ -62,4 +62,3 @@ NAME: my-release
 | resources.requests.memory | string | `"512Mi"` |  |
 | service.name | string | `"thumbor"` |  |
 | service.type | string | `"ClusterIP"` |  |
-| affinity | dictionary | `{}` | Affinity for pod assignment |
