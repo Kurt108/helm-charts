@@ -3,9 +3,13 @@ kind: Service
 metadata:
   name: {{ template "gotenberg.fullname" . }}
   labels:
+    {{ include "gotenberg.labels" . | nindent 4 }}
     app: {{ template "gotenberg.name" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
+    {{- if .Values.service.labels }}
+    {{ toYaml .Values.service.labels }}
+    {{- end }}
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -14,5 +18,4 @@ spec:
       protocol: TCP
       name: http
   selector:
-    app: {{ template "gotenberg.name" . }}
-    release: {{ .Release.Name }}
+    {{- include "gotenberg.selectorLabels" . | nindent 4 }}

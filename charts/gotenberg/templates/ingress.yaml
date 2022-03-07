@@ -17,6 +17,7 @@ kind: Ingress
 metadata:
   name: {{ $fullName }}
   labels:
+    {{ include "gotenberg.labels" . | nindent 4 }}
     app: {{ template "gotenberg.name" . }}
     chart: {{ template "gotenberg.chart" . }}
     release: {{ .Release.Name }}
@@ -31,7 +32,7 @@ metadata:
 {{ else }}
   annotations:
 {{- with .Values.ingress.annotations }}
-{{ toYaml . | indent 4 }}  
+{{ toYaml . | indent 4 }}
 {{- end }}
 {{- end }}
 spec:
@@ -61,10 +62,10 @@ spec:
                  name: {{ $fullName }}
                  port:
                    number: {{ $svcPort }}
-               {{- else }}            
+               {{- else }}
               serviceName: {{ $fullName }}
               servicePort: http
               {{- end }}
-           {{- end }}              
+           {{- end }}
   {{- end }}
 {{- end }}
