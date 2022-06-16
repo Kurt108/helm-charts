@@ -61,4 +61,5 @@ NAME: my-release
 | resources.requests.cpu | int | `1` |  |
 | resources.requests.memory | string | `"512Mi"` |  |
 | service.name | string | `"thumbor"` |  |
+| service.port | int | `80` |  |
 | service.type | string | `"ClusterIP"` |  |
