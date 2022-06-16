@@ -44,6 +44,7 @@ image:
 service:
   name: thumbor
   type: ClusterIP
+  port: 80
 
 persistence:
   enabled: false
@@ -66,7 +67,7 @@ autoscaling:
   targetCPUUtilizationPercentage: 80
 
 # -- Affinity for Pod assignment
-affinity: {} 
+affinity: {}
 #affinity:
 #  nodeAffinity:
 #    requiredDuringSchedulingIgnoredDuringExecution:
