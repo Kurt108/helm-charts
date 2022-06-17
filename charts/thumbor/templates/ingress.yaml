@@ -1,29 +1,52 @@
+{{- if .Values.ingress.enabled }}
 {{- $fullName := include "thumbor.fullname" . -}}
-{{- $servicePath := .Values.ingress.path -}}
+{{- $servicePort := .Values.service.port -}}
+{{- $ingressPath := .Values.ingress.path -}}
+{{- if .Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+apiVersion: networking.k8s.io/v1
+{{- else if .Capabilities.APIVersions.Has "networking.k8s.io/v1beta1/Ingress" }}
 apiVersion: networking.k8s.io/v1beta1
+{{- end }}
 kind: Ingress
 metadata:
   name: {{ $fullName }}
-  {{- if .Values.ingress.annotations }}
-  annotations:
-{{ toYaml .Values.ingress.annotations | indent 4 }}
-{{- end }}
   labels:
     app: {{ template "thumbor.name" . }}
     chart: {{ template "thumbor.chart" . }}
-    heritage: {{ .Release.Service }}
     release: {{ .Release.Name }}
-{{- if .labels }}
-{{ toYaml .labels | indent 4 }}
+    heritage: {{ .Release.Service }}
+{{- with .Values.ingress.annotations }}
+  annotations:
+{{ toYaml . | indent 4 }}
 {{- end }}
 spec:
   rules:
+{{- if .Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
     {{- range $host := .Values.ingress.hosts }}
     - host: {{ $host }}
       http:
         paths:
-          - path: {{ $servicePath }}
+          - path: {{ $ingressPath }}
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ $fullName }}
+                port:
+                  number: {{ $servicePort }}
+{{- end }}
+{{- else if .Capabilities.APIVersions.Has "networking.k8s.io/v1beta1/Ingress" }}
+    {{- range $host := .Values.ingress.hosts }}
+    - host: {{ $host }}
+      http:
+        paths:
+          - path: {{ $ingressPath }}
             backend:
               serviceName: {{ $fullName }}
-              servicePort: 80
+              servicePort: {{ $servicePort }}
+{{- end }}
+{{- end }}
+  {{- if .Values.ingress.tls }}
+  tls:
+{{ toYaml .Values.ingress.tls | indent 4 }}
   {{- end }}
+{{- end }}

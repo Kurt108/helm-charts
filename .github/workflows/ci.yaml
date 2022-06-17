@@ -78,5 +78,4 @@ jobs:
         with:
           node_image: kindest/node:${{ matrix.k8s }}
       - name: Run chart-testing (install) ${{ matrix.k8s }}
-        run: ct install
-          
+        run: ct install --all

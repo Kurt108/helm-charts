@@ -20,8 +20,6 @@ conf:
   storageExpirationSeconds: "86400"
   detectors: ""
 
-
-
 ingress:
   hosts:
     - "thumbor.domain"
@@ -44,6 +42,7 @@ image:
 service:
   name: thumbor
   type: ClusterIP
+  port: 80
 
 persistence:
   enabled: false
@@ -66,13 +65,13 @@ autoscaling:
   targetCPUUtilizationPercentage: 80
 
 # -- Affinity for Pod assignment
-affinity: {} 
-#affinity:
-#  nodeAffinity:
-#    requiredDuringSchedulingIgnoredDuringExecution:
-#      nodeSelectorTerms:
-#        - matchExpressions:
-#            - key: node-type
-#              operator: In
-#              values:
-#                - thumbor
+affinity: {}
+#  affinity:
+#    nodeAffinity:
+#      requiredDuringSchedulingIgnoredDuringExecution:
+#        nodeSelectorTerms:
+#          - matchExpressions:
+#              - key: node-type
+#                operator: In
+#                values:
+#                  - thumbor
