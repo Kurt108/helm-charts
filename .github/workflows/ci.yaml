@@ -19,7 +19,7 @@ jobs:
         uses: helm/chart-testing-action@main
         with:
           command: lint
-          config: .github/ct.yaml
+ #         config: .github/ct.yaml
 
   lint-docs:
     runs-on: ubuntu-latest
@@ -80,6 +80,6 @@ jobs:
         uses: helm/chart-testing-action@v2.2.1
         with:
           command: install
-          config: .github/ct.yaml      
+#          config: .github/ct.yaml      
 
           
