@@ -20,8 +20,6 @@ conf:
   storageExpirationSeconds: "86400"
   detectors: ""
 
-
-
 ingress:
   hosts:
     - "thumbor.domain"
@@ -68,12 +66,12 @@ autoscaling:
 
 # -- Affinity for Pod assignment
 affinity: {}
-#affinity:
-#  nodeAffinity:
-#    requiredDuringSchedulingIgnoredDuringExecution:
-#      nodeSelectorTerms:
-#        - matchExpressions:
-#            - key: node-type
-#              operator: In
-#              values:
-#                - thumbor
+#  affinity:
+#    nodeAffinity:
+#      requiredDuringSchedulingIgnoredDuringExecution:
+#        nodeSelectorTerms:
+#          - matchExpressions:
+#              - key: node-type
+#                operator: In
+#                values:
+#                  - thumbor
