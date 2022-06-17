@@ -1,7 +1,7 @@
 # thumbor
 
 A chart containing Thumbor
-1.0.30
+1.1.31
 [![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/kurt108)](https://artifacthub.io/packages/search?repo=kurt108)
 
 Based on the fanastic work from Cloudposse: https://charts.cloudposse.com/incubator/
