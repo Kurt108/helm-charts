@@ -42,7 +42,8 @@ spec:
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         args:
-          - "thumbor"
+          - "-c" 
+          - "/app/thumbor.conf"
         ports:
         - name: http
           containerPort: 80
