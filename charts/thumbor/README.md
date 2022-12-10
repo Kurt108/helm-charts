@@ -1,7 +1,7 @@
 # thumbor
 
 A chart containing Thumbor
-1.1.31
+2.0.0
 [![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/kurt108)](https://artifacthub.io/packages/search?repo=kurt108)
 
 Based on the fanastic work from Cloudposse: https://charts.cloudposse.com/incubator/
@@ -44,10 +44,11 @@ NAME: my-release
 | env.open.CORS_ALLOW_ORIGIN | string | `"*"` |  |
 | env.open.HEALTHCHECK_ROUTE | string | `"/healthcheck"` |  |
 | env.open.LOG_LEVEL | string | `"error"` |  |
+| env.open.THUMBOR_LOG_CONFIG | string | `"None"` | Can be JSON or None |
 | env.open.THUMBOR_PORT | string | `"80"` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
-| image.repository | string | `"registry.hub.docker.com/minimalcompact/thumbor"` |  |
-| image.tag | string | `"6.7.5"` |  |
+| image.repository | string | `"registry.hub.docker.com/thumbororg/thumbor"` |  |
+| image.tag | string | `"7.3-py-3.10"` |  |
 | ingress.annotations."nginx.ingress.kubernetes.io/rewrite-target" | string | `"/$2"` |  |
 | ingress.hosts[0] | string | `"thumbor.domain"` |  |
 | ingress.path | string | `"/scale(/|$)(.*)"` |  |

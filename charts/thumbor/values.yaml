@@ -7,6 +7,10 @@ env:
     AUTO_WEBP: "True"
     CORS_ALLOW_ORIGIN: "*"
     HEALTHCHECK_ROUTE: "/healthcheck"
+    # -- Can be JSON or None
+    THUMBOR_LOG_CONFIG: "None" 
+    # -- Speed Up Browsing-Experience for Clients. Storage need to support this
+    SEND_IF_MODIFIED_LAST_MODIFIED_HEADERS: "True"
 
 # Some Configs should be set via config-file and not as environment variable
 conf:
@@ -35,8 +39,8 @@ ingress:
     nginx.ingress.kubernetes.io/rewrite-target: /$2
 
 image:
-  repository: registry.hub.docker.com/minimalcompact/thumbor
-  tag: 6.7.5
+  repository: registry.hub.docker.com/thumbororg/thumbor
+  tag: 7.3-py-3.10
   pullPolicy: IfNotPresent
 
 service:
