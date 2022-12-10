@@ -8,7 +8,7 @@ env:
     CORS_ALLOW_ORIGIN: "*"
     HEALTHCHECK_ROUTE: "/healthcheck"
     # -- Can be JSON or None
-    THUMBOR_LOG_CONFIG: "None" 
+    THUMBOR_LOG_CONFIG: "None"
     # -- Speed Up Browsing-Experience for Clients. Storage need to support this
     SEND_IF_MODIFIED_LAST_MODIFIED_HEADERS: "True"
 
