@@ -12,17 +12,10 @@ env:
     # -- Speed Up Browsing-Experience for Clients. Storage need to support this
     SEND_IF_MODIFIED_LAST_MODIFIED_HEADERS: "True"
 
-# Some Configs should be set via config-file and not as environment variable
+# It is possible overide string configs through environment variables. All other Variables need to be set via the Config file
 conf:
   allowedSources: "'http://domain_or_wildcard', 'comma_seperated'"
-  respectOrientation: "False"
-  resultStorage: "'thumbor.result_storages.file_storage'"
-  allowUnsafeUrl: "True"
-  resultStorageExpirationSeconds: "86400"
-  maxAge: "259200"
-  maxAgeTempImage: "60"
-  storageExpirationSeconds: "86400"
-  detectors: ""
+
 
 ingress:
   hosts:
