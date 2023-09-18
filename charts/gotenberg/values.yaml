@@ -9,6 +9,11 @@ image:
   tag: 7.5.0
   pullPolicy: IfNotPresent
 
+imagePullSecrets:
+  - name: ""
+nameOverride: ""
+fullnameOverride: ""  
+
 env:
   open:
     LOG_FORMAT: "TEXT"

@@ -12,6 +12,10 @@ metadata:
 {{ toYaml .Values.annotations | indent 8 }}
 {{- end }}
 spec:
+  {{- with .Values.imagePullSecrets }}
+  imagePullSecrets:
+    {{- toYaml . | nindent 8 }}
+  {{- end }}
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
