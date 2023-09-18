@@ -11,8 +11,6 @@ image:
 
 imagePullSecrets:
   - name: ""
-nameOverride: ""
-fullnameOverride: ""  
 
 env:
   open:
