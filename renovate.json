@@ -1,0 +1,120 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "enabled": true, 
+    "configMigration": true,
+    "assigneesFromCodeOwners": true,
+    "prConcurrentLimit": 10,
+    "extends": [
+        "config:recommended",
+        "default:semanticCoåmmitTypeAll(ci)",
+        "default:automergeLinters",
+        "default:docker",
+        "default:enableVulnerabilityAlertsWithLabel(CRITICAL)",
+        "docker:pinDigests",
+        "workarounds:all"
+    ],
+    "packageRules": [
+        {
+            "description": "group and label patch updates - could be automerged in the future",
+            "matchUpdateTypes": [
+                "patch"
+            ],
+            "automerge": false,
+            "groupName": "all patch dependencies",
+            "groupSlug": "patch",
+            "addLabels": [
+                "patch",
+                "proposalForAutomerge"
+            ]
+        },
+        {
+            "description": "group and label minor updates - wait 1 days before creating the PR",
+            "automerge": false,
+            "groupName": "all minor dependencies",
+            "groupSlug": "minor",            
+            "matchUpdateTypes": [
+                "minor"
+            ],
+            "addLabels": [
+                "minor",
+                "proposalForAutomerge"
+            ],
+            "minimumReleaseAge": "1 days"
+        },
+        {
+            "description": "label major updates - wait 3 days before creating the PR",
+            "matchUpdateTypes": [
+                "major"
+            ],
+            "addLabels": [
+                "major"
+            ],
+            "minimumReleaseAge": "3 days"
+        },
+        {
+            "description": "add devops-label for docker-stuff",
+            "groupName": "All devops dependencies",
+            "groupSlug": "devops",                
+            "matchDatasources": [
+                "docker",
+                "helm",
+                "gitlab-tags"
+            ],
+            "addLabels": [
+                "devops"
+            ]
+        },
+    {
+            "description": "add a label for suggested automerge MRs",
+            "matchPackageNames": ["data-services/devops/ci-templates"],
+            "automerge": false,
+            "addLabels": [
+                "ProposalForAutomerge"
+            ],
+            "minimumReleaseAge": "0 days"
+    }
+    ],
+    "customManagers": [
+        {
+            "customType": "regex",
+            "fileMatch": [
+                "(^|/|\\.)([Dd]ocker|[Cc]ontainer)file$",
+                "(^|/)([Dd]ocker|[Cc]ontainer)file[^/]*$"
+            ],
+            "matchStrings": [
+                "# renovate: datasource=(?<datasource>[a-z-.]+?) depName=(?<depName>[^\\s]+?)(?: (lookupName|packageName)=(?<packageName>[^\\s]+?))?(?: versioning=(?<versioning>[^\\s]+?))?(?: extractVersion=(?<extractVersion>[^\\s]+?))?(?: registryUrl=(?<registryUrl>[^\\s]+?))?\\s(?:ENV|ARG)\\s+[A-Za-z0-9_]+?_VERSION[ =][\"']?(?<currentValue>.+?)[\"']?\\s"
+            ]
+        },
+        {
+            "customType": "regex",
+            "fileMatch": [
+                "\\.gitlab-ci\\.ya?ml$"
+            ],
+            "matchStrings": [
+                "# renovate: datasource=(?<datasource>[a-z-.]+?) depName=(?<depName>[^\\s]+?)(?: (?:packageName)=(?<packageName>[^\\s]+?))?(?: versioning=(?<versioning>[^\\s]+?))?(?: extractVersion=(?<extractVersion>[^\\s]+?))?(?: registryUrl=(?<registryUrl>[^\\s]+?))?\\s+[A-Za-z0-9_]+?_VERSION\\s*:\\s*[\"']?(?<currentValue>.+?)[\"']?\\s"
+            ]
+        },
+        {
+            "customType": "regex",
+            "datasourceTemplate": "docker",
+            "fileMatch": [
+                "(^|/)Chart\\.yaml$"
+            ],
+            "matchStrings": [
+                "#\\s*renovate: image=(?<depName>.*?)\\s+appVersion:\\s*[\"']?(?<currentValue>[\\w+\\.\\-]*)"
+            ]
+        },
+        {
+            "customType": "regex",
+            "fileMatch": [
+                "(^|/)Makefile$",
+                "(^|/)makefile$",
+                "(^|/)GNUMakefile$",
+                "\\.mk$"
+            ],
+            "matchStrings": [
+                "# renovate: datasource=(?<datasource>[a-z-.]+?) depName=(?<depName>[^\\s]+?)(?: (?:packageName)=(?<packageName>[^\\s]+?))?(?: versioning=(?<versioning>[^\\s]+?))?(?: extractVersion=(?<extractVersion>[^\\s]+?))?(?: registryUrl=(?<registryUrl>[^\\s]+?))?\\s+[A-Za-z0-9_]+?_VERSION\\s*:*\\??=\\s*[\"']?(?<currentValue>.+?)[\"']?\\s"
+            ]
+        }
+    ]
+}
